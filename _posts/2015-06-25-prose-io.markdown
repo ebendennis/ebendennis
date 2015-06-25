@@ -1,5 +1,8 @@
 ---
-published: false
+layout: post
+title:  "Testing Prose.io"
+date:   2015-06-25 12:43:15
+categories: jekyll update
 ---
 
 
