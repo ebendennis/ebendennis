@@ -1,0 +1,85 @@
+// Chartophile Add-ins
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,700");
+
+.crimson {
+    font-family: "Crimson Text", "Times New Roman", Times, serif;
+    font-weight: 600;
+}
+
+.page-header {
+    border-bottom-color: #ffd700;
+    color: #353531;
+    margin-top: 20px;
+}
+
+.page-footer {
+    border-top: 1px solid #ffd700;
+    color: #353531;
+    margin-top: 20px;
+    padding:25px 0px;
+}
+
+body {
+    margin-top: 50px;
+}
+
+.row {
+    margin: 0;
+}
+
+.thumbnail {
+    background-color: transparent;
+    border: medium none;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.thumbnail img {
+    border: medium none;
+    filter: blur(0px);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+
+.thumbnail:hover img {
+    filter: blur(15px);
+    opacity: 0.5;
+    transition: all 0.5s ease 0s;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -ms-filter: blur(15px);
+    -o-filter: blur(15px);
+}
+
+.thumbnail .projectDescription {
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+
+.thumbnail:hover .projectDescription {
+    opacity:1;
+    transition: all 0.5s ease 0s;
+}
+
+.thumbnail .projectDescription .projectCredits {
+    color: #353531;
+    font-size: 1.5em;
+}
+
+.thumbnail .projectDescription .projectName {
+    color: #ffd700;
+    font-size: 2em;
+    text-shadow: 0 0 10px #555;
+}
+
+.navbar .navbar-nav {
+    background-color: #fdfdfd;
+    margin-top:0;
+}
