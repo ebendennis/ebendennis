@@ -281,6 +281,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_site\/build\/lib\/bootstrap\/css\/theme.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/build\/lib\/bootstrap\/css\/theme.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_site\/build\/lib\/bootstrap\/js\/bootstrap.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1999,6 +2008,15 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/_site\/build\/styles\/css\/app.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/build\/styles\/css\/app.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_site\/build\/styles\/less\/app.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -2389,7 +2407,7 @@
 		},
 	"\/app\/assets\/css\/app.css": {
 		"fileType": 16,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/assets\/css\/app.css",
 		"outputAbbreviatedPath": "No Output Path",
@@ -5582,9 +5600,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/styles\/less\/app.less",
-		"outputAbbreviatedPath": "\/build\/styles\/css\/app.css",
+		"outputAbbreviatedPath": "\/app\/assets\/css\/app.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
