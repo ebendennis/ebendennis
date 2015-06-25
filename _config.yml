@@ -1,11 +1,9 @@
 # Site settings
-title: Chartophile
+title: Your awesome title
 email: eben@chartophile.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "http://ebendennis.github.io/blog" # the subpath of your site, e.g. /blog/
+  Chartophile.com - Cartography | Web Mapping | Desktop GIS
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ebendennis.github.io" # the base hostname & protocol for your site
 twitter_username: ebendennis
 github_username:  ebendennis
@@ -16,7 +14,7 @@ markdown: kramdown
 # Prose settings
 prose:
   rooturl: '_posts'
-  siteurl: 'http://ebendennis.github.io'
+  siteurl: 'http://ebendennis.github.io/blog/'
   relativeLinks: ''
   media: 'media'
   ignore:
