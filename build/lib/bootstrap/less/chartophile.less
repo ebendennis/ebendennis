@@ -83,3 +83,56 @@ body {
     background-color: #fdfdfd;
     margin-top:0;
 }
+
+
+.navbar-nav li a:before, .navbar-nav li a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    transition: width 0.3s
+}
+
+.navbar-nav li a:before {
+    width: 100%;
+    background: transparent
+}
+
+.navbar-nav li a:after {
+    width: 0;
+    background: #ffd700
+}
+
+.navbar-nav li a:active:after, .navbar-nav li a:hover:after {
+    width: 100%
+}
+
+.navbar-brand:before, .navbar-brand:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    transition: width 0.3s
+}
+
+.navbar-brand:before {
+    width: 170px;
+    background: transparent
+}
+
+.navbar-brand:after {
+    width: 0;
+    background: #ffd700
+}
+
+.navbar-brand:active:after, .navbar-brand:hover:after {
+    width: 170px
+}

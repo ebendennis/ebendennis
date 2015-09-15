@@ -4241,7 +4241,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
-  border-bottom: 2px solid #ffd700;
 }
 .navbar-brand > img {
   display: block;
@@ -4471,7 +4470,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #ffd700;
+  color: #333333;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
@@ -6748,6 +6747,54 @@ body {
 .navbar .navbar-nav {
   background-color: #fdfdfd;
   margin-top: 0;
+}
+.navbar-nav li a:before,
+.navbar-nav li a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.navbar-nav li a:before {
+  width: 100%;
+  background: transparent;
+}
+.navbar-nav li a:after {
+  width: 0;
+  background: #ffd700;
+}
+.navbar-nav li a:active:after,
+.navbar-nav li a:hover:after {
+  width: 100%;
+}
+.navbar-brand:before,
+.navbar-brand:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.navbar-brand:before {
+  width: 170px;
+  background: transparent;
+}
+.navbar-brand:after {
+  width: 0;
+  background: #ffd700;
+}
+.navbar-brand:active:after,
+.navbar-brand:hover:after {
+  width: 170px;
 }
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
