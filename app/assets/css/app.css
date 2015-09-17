@@ -1073,7 +1073,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Franklin Gothic Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
   color: #333333;
@@ -1180,8 +1180,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Crimson Text";
-  font-weight: 600;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   line-height: 1.1;
   color: inherit;
 }
@@ -1465,7 +1465,7 @@ blockquote {
   padding: 11px 22px;
   margin: 0 0 22px;
   font-size: 20px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #ffd700;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -1489,7 +1489,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #ffd700;
   border-left: 0;
   text-align: right;
 }
@@ -3507,7 +3507,7 @@ tbody.collapse.in {
   display: block;
   padding: 3px 20px 3px 10px;
   clear: both;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 1.42857143;
   color: #333333;
   white-space: nowrap;
@@ -4232,9 +4232,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 14px 15px;
-  font-family: "Crimson Text";
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 22px;
   height: 50px;
 }
@@ -5935,7 +5935,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Franklin Gothic Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.4;
@@ -6042,7 +6042,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Franklin Gothic Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6701,6 +6701,9 @@ body {
 .row {
   margin: 0;
 }
+blockquote {
+  border-left-width: 2px;
+}
 .thumbnail {
   background-color: transparent;
   border: medium none;
@@ -6738,11 +6741,13 @@ body {
 .thumbnail .projectDescription .projectCredits {
   color: #353531;
   font-size: 1.5em;
+  font-weight: 300;
 }
 .thumbnail .projectDescription .projectName {
   color: #ffd700;
   font-size: 2em;
   text-shadow: 0 0 10px #555;
+  font-weight: 500;
 }
 .navbar .navbar-nav {
   background-color: #fdfdfd;
@@ -6772,6 +6777,13 @@ body {
 .navbar-nav li a:hover:after {
   width: 100%;
 }
+.nofx li a:active:after,
+.nofx li a:hover:after {
+  width: 0;
+}
+.navbar-brand {
+  font-weight: 300;
+}
 .navbar-brand:before,
 .navbar-brand:after {
   content: '';
@@ -6785,7 +6797,7 @@ body {
   transition: width 0.3s;
 }
 .navbar-brand:before {
-  width: 170px;
+  width: 100%;
   background: transparent;
 }
 .navbar-brand:after {
@@ -6794,7 +6806,7 @@ body {
 }
 .navbar-brand:active:after,
 .navbar-brand:hover:after {
-  width: 170px;
+  width: 298px;
 }
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome

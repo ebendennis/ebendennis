@@ -29,6 +29,10 @@ body {
     margin: 0;
 }
 
+blockquote {
+    border-left-width:2px
+}
+
 .thumbnail {
     background-color: transparent;
     border: medium none;
@@ -71,12 +75,14 @@ body {
 .thumbnail .projectDescription .projectCredits {
     color: #353531;
     font-size: 1.5em;
+    font-weight: 300;
 }
 
 .thumbnail .projectDescription .projectName {
     color: #ffd700;
     font-size: 2em;
     text-shadow: 0 0 10px #555;
+    font-weight: 500;
 }
 
 .navbar .navbar-nav {
@@ -111,6 +117,14 @@ body {
     width: 100%
 }
 
+.nofx li a:active:after, .nofx li a:hover:after {
+    width:0;
+}
+
+.navbar-brand {
+    font-weight: 300;
+}
+
 .navbar-brand:before, .navbar-brand:after {
     content: '';
     display: block;
@@ -124,7 +138,7 @@ body {
 }
 
 .navbar-brand:before {
-    width: 170px;
+    width: 100%;
     background: transparent
 }
 
@@ -134,5 +148,5 @@ body {
 }
 
 .navbar-brand:active:after, .navbar-brand:hover:after {
-    width: 170px
+    width: 298px
 }
