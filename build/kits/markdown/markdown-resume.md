@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 ## Eben Dennis
 ### Experience
 #### ICON Engineering
