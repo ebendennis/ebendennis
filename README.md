@@ -1,3 +1,3 @@
-# ebendennis.githib.io
+# ebendennis.github.io
 
 Just a personal blog. Built on [Pixelarity's](http:\\www.pixelarity.com) Phantom template.
