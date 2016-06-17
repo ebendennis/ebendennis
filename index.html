@@ -1,78 +1,111 @@
 ---
-layout: index
+layout: default-contact
+title: ebendennis.github.io
+icon: map-o
 ---
-
-        <div class="container">
-            <div class="page-header">
-                <h1>Eben Dennis</h1>
-                <p class="lead">Cartography, Web Mapping, Desktop GIS</p>
-            </div>
-
-            <div class="row" id="projects">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 thumbnail">
-                  <a href="http://chartophile.com/maps/lfc-in-europe" target="blank"><img src="app/assets/img/justice.jpg" class="img-responsive">
-                    <div class='projectDescription'>
-                      <p class='projectCredits'>50 Years of LFC in Europe</p>
-                      <p class='projectName'>Liverpool FC</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 thumbnail">
-                  <a href="http://ebendennis.github.io/northglenn/" target="blank"><img src="app/assets/img/northglenn.jpg" class="img-responsive">
-                    <div class='projectDescription'>
-                      <p class='projectCredits'>Stormwater Inventory</p>
-                      <p class='projectName'>City of Northglenn</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 thumbnail">
-                  <a href="http://ebendennis.github.io/cartodb-draw" target="blank"><img src="app/assets/img/corgi.jpg" class="img-responsive">
-                    <div class='projectDescription'>
-                      <p class='projectCredits'>Data Collector</p>
-                      <p class='projectName'>CartoDB + Leaflet</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 thumbnail">
-                  <a href="http://chartophile.com/icon/data/hpfmd/results" target="blank"><img src="app/assets/img/hpfmd.jpg" class="img-responsive">
-                    <div class='projectDescription'>
-                      <p class='projectCredits'>Stormwater Inventory</p>
-                      <p class='projectName'>HPFMD</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 thumbnail">
-                  <a href="http://www.iconeng.com/project/boulder-creek/community-comments.html" target="blank"><img src="app/assets/img/bcm.jpg" class="img-responsive">
-                    <div class='projectDescription'>
-                      <p class='projectCredits'>Community Outreach</p>
-                      <p class='projectName'>Boulder Creek Master Plan</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 thumbnail">
-                  <a href="http://iconengineering.github.io/douglas-changes" target="blank"><img src="app/assets/img/douglas.jpg" class="img-responsive">
-                    <div class='projectDescription'>
-                      <p class='projectCredits'>Douglas County Changes</p>
-                      <p class='projectName'>FEMA NFIP</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 thumbnail">
-                  <a href="http://chartophile.com/icon/lomc/map" target="blank"><img src="app/assets/img/lomc.jpg" class="img-responsive">
-                    <div class='projectDescription'>
-                      <p class='projectCredits'>Data Archive</p>
-                      <p class='projectName'>LOMC</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 thumbnail">
-                  <a href="http://chartophile.com/icon/nfhl" target="blank"><img src="app/assets/img/flood.jpg" class="img-responsive">
-                    <div class='projectDescription'>
-                      <p class='projectCredits'>Flood Hazard Data</p>
-                      <p class='projectName'>NFHL</p>
-                    </div>
-                  </a>
-                </div>
-            </div>
-
-        </div>
+	<header>
+		<h1>Cartography. Web Mapping.<br />
+		Desktop GIS.</h1>
+		<p>This is just a small respository of some of my work, assorted thoughts, and a bit of research.</p>
+	</header>
+	<section class="tiles">
+		<article class="style6">
+			<span class="image">
+				<img src="{{ "images/justice.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://ebendennis.github.io/lfc-in-europe" target="blank">
+				<h2>Liverpool</h2>
+				<div class="content">
+					<p>50 Years of LFC in Europe.</p>
+				</div>
+			</a>
+		</article>
+		<article class="style2">
+			<span class="image">
+				<img src="{{ "images/northglenn.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://ebendennis.github.io/northglenn/" target="blank">
+				<h2>Northglenn</h2>
+				<div class="content">
+					<p>Stormwater Inventory. Built with Mapbox.js and CartoDB.</p>
+				</div>
+			</a>
+		</article>
+		<article class="style3">
+			<span class="image">
+				<img src="{{ "images/flood.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://chartophile.com/icon/nfhl" target="blank">
+				<h2>NFHL</h2>
+				<div class="content">
+					<p>The National Flood Hazard Layer. In a web application.</p>
+				</div>
+			</a>
+		</article>
+		<article class="style4">
+			<span class="image">
+				<img src="{{ "images/bcm.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://www.iconeng.com/project/boulder-creek/community-comments.html" target="blank">
+				<h2>Community</h2>
+				<div class="content">
+					<p>Boulder Creek Master Plan. Community outreach using Mapbox and Firebase.</p>
+				</div>
+			</a>
+		</article>
+		<article class="style5">
+			<span class="image">
+				<img src="{{ "images/hpfmd.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://chartophile.com/icon/data/hpfmd/results" target="blank">
+				<h2>Inventory</h2>
+				<div class="content">
+					<p>Data collection with Leaflet, Mapbox, and CartoDB.</p>
+				</div>
+			</a>
+		</article>
+		<article class="style6">
+			<span class="image">
+				<img src="{{ "images/donald.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://www.chartophile.com/donald-spence" target="blank">
+				<h2>Friends</h2>
+				<div class="content">
+					<p>Map of Donald's first solo tour. Soon to be replaced by VTW's Euro tour w/ Lagwagon.</p>
+				</div>
+			</a>
+		</article>
+		<article class="style3">
+			<span class="image">
+				<img src="{{ "images/corgi.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://ebendennis.github.io/firebase-draw/" target="blank">
+				<h2>Firebase</h2>
+				<div class="content">
+					<p>Mapbox and Firebase data collection. Now with more corgis.</p>
+				</div>
+			</a>
+		</article>
+		<article class="style4">
+			<span class="image">
+				<img src="{{ "images/lomc.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://chartophile.com/icon/lomc/map" target="blank">
+				<h2>LOMC</h2>
+				<div class="content">
+					<p>Data archiving and distribution with Mapbox.</p>
+				</div>
+			</a>
+		</article>
+		<article class="style2">
+			<span class="image">
+				<img src="{{ "images/douglas.jpg" | prepend: site.baseurl }}" alt="" />
+			</span>
+			<a href="http://iconengineering.github.io/douglas-changes" target="blank">
+				<h2>NFIP</h2>
+				<div class="content">
+					<p>Publishing data for stakeholder review. Local and Federal agencies.</p>
+				</div>
+			</a>
+		</article>
+	</section>

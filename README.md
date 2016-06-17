@@ -1,3 +1,3 @@
-## It's a portfolio/blog!
+# ebendennis.githib.io
 
-(Portfolio in progress, blog part forthcoming)
+Just a personal blog. Built on (Pixelarity's)[http:\\www.pixelarity.com] Phantom template.

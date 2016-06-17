@@ -1,0 +1,210 @@
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,latin-ext);
+
+@font-face {
+   font-family: 'AvenirLTStd-Light'; 
+   src: url('http://www.chartophile.com/fonts/AvenirLTStd-Light.otf') format("opentype");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'AvenirLTStd-Heavy'; 
+   src: url('http://www.chartophile.com/fonts/AvenirLTStd-Heavy.otf') format("opentype");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'AvenirNext-Bold'; 
+   src: url('http://www.chartophile.com/fonts/AvenirNext-Bold.ttf') format("truetype");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'AvenirNext-Regular'; 
+   src: url('http://www.chartophile.com/fonts/AvenirNext-Regular.ttf') format("truetype");
+   font-weight: normal;
+   font-style: normal;
+}
+
+a:link {color:#000;}
+a:hover {color:#000;}
+a:visited {color:#000;}
+a.toggleMenu:link {color:#000;} 
+a.toggleMenu:visited {color:#000;} 
+a.toggleMenu:hover {color:#000;} 
+a.video:link {color:#ac0000;text-shadow:none;} 
+a.video:visited {color:#ac0000;text-decoration:none;} 
+a.video:hover {color:#ce0000;text-decoration:none;}
+
+body, nav, ul, li, a  {margin: 0; padding: 0;}
+body {font-family: 'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic', Helvetica, Arial, sans-serif;overflow-x:hidden; }
+a {text-decoration: none;}
+#map {position:absolute;top:50px; bottom:0; width:100%;}
+
+
+.leaflet-top, .leaflet-bottom {z-index:1 !important;}
+.leaflet-top, .leaflet-left {padding-top:50px;}
+.leaflet-popup-content {background:#fff;max-height: 450px;overflow: auto;}
+.leaflet-popup-content-wrapper {background:#fff;box-shadow:0px 0px 4px 2px rgba(50%,50%,50%,0.25) !important;border: 1px solid #999;}
+
+#popup-table .popup-table {border-collapse:collapse;border-spacing:0;}
+#popup-table .popup-table td{font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:1.5em;padding:0px 2px;border:none;overflow:hidden;word-break:normal;text-align:center;vertical-align:middle;}
+#popup-table .popup-table th{font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:1.5em;padding:5px 5px;border:none;overflow:hidden;word-break:normal;}
+#popup-table .popup-table .popup-info{color:#333;font-size:1.25em;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-away{font-size:1.75em;padding-left:5px;}
+#popup-table .popup-table .popup-comp{color:#ac0000; text-align:center;}
+#popup-table .popup-table .popup-home{font-size:1.75em;padding-right:5px;}
+#popup-table .popup-table .popup-score{font-size:2em;color:#ac0000;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-logo{text-align:center;}
+#popup-table .popup-table .popup-logo img{max-height:80px;max-width:80px !important;padding:0px 5px 4px 5px;vertical-align:middle;}
+#popup-table .popup-table .popup-extra{color:#ac0000;font-size:.75em;}
+#popup-table .popup-table .popup-result{border-bottom:2px solid #ac0000;}
+#popup-table .popup-table tr.popup-firstGoal >td {padding-top:1em;}
+#popup-table .popup-table .popup-awaygoal{font-size:1em;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-time{font-size:1em;color:#ac0000;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-homegoal{font-size:1em;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-video{border-top:1px solid #ac0000;text-align:center; padding-top:7px;}
+
+.result-table  {border-collapse:collapse;border-spacing:0;}
+.result-table td{padding:0px 2px;border:none;overflow:hidden;word-break:normal;vertical-align:middle;}
+.result-table th{padding:5px 5px;border:none;overflow:hidden;word-break:normal;}
+.result-table .round{box-shadow: inset 0px 4px 6px -6px rgba(50%,50%,50%,.35);padding: 5px 0px 0px 5px;font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#ac0000;font-size:1em;text-align:left;}
+.result-table .dates{padding: 0px 0px 0px 15px;font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#ac0000; font-size:.75em;text-align:left;}
+.result-table .match-away{font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:1em;padding-left:5px;text-align:center;}
+.result-table .year-comp{box-shadow: inset 0 -3px 3px -2px rgba(50%,50%,50%,0.25);background:#ddd;font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:1.5em;color:#ac0000;text-align:center;}
+.result-table .year-comp2{padding-bottom:0px;background:#ddd;font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:1.5em;color:#ac0000;text-align:center;}
+.result-table .match-home{font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:1em;padding-right:5px;text-align:center;}
+.result-table .match-score{font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:1em;color:#ac0000;text-align:center;padding:0px;}
+.result-table .match-logo{text-align:center;}
+.result-table .match-logo img{max-height:30px;max-width:30px;padding:0px 5px 4px 5px;vertical-align:middle;}
+.result-table .match-extra{color:#ac0000;font-size:.75em;text-align: center;}
+.result-table .gs{padding-top:.5em;padding-bottom:.5em;}
+.result-table .stats{padding: 2px 0px 2px 5px;font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#ac0000;font-size:1em;text-align:center;}
+.result-table .stats-head{padding: 2px 15px 2px 15px;font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#000; font-size:.9em;text-align:right;}
+.result-table .stats2{padding: 2px 0px 2px 5px;font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#ac0000;font-size:1em;text-align:center;background:#eee;}
+.result-table .stats-head2{padding: 2px 15px 2px 15px;font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#000; font-size:.9em;text-align:right;background:#eee;}
+.result-table .stats-right{padding: 2px 0px 2px 5px;font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#000;font-size:1em;text-align:left;}
+.result-table .stats-right2{padding: 2px 0px 2px 5px;font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#000;font-size:1em;text-align:left;background:#eee;}
+.result-table .stats-link{padding: 2px 0px 2px 5px;font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;color:#000 !important;font-size:.9em;text-align:left;}
+
+.results {
+  display:inline-block; 
+  top:70px;
+  right:10px;
+  position:absolute;
+  background:#fff;
+  border: 1px solid #999;
+  max-height: 650px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow:0px 0px 4px 2px rgba(50%,50%,50%,0.25);
+  border-radius:3px;
+}
+
+#groupStage .tg  {border-collapse:collapse;border-spacing:0; margin:0px 10px 0px 10px;}
+#groupStage .tg td{font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:1em;padding:2px 5px;border-style:solid;border-width:1px;border-color:#777;overflow:hidden;word-break:normal;}
+#groupStage .tg th{font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:.9em;padding:2px 5px;border-style:solid;border-width:1px;border-color:#777;overflow:hidden;word-break:normal;}
+#groupStage .tg .tg-score2{text-align:center;}
+#groupStage .tg .tg-home2{font-family: 'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size:1em;border-left:none;}
+#groupStage .tg .tg-home1{font-family: 'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size:1em;background-color:#ac0000;color:#fff;border-left:none;}
+#groupStage .tg .tg-away{font-family: 'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size:1em;text-align:center;}
+#groupStage .tg .tg-score1{background-color:#ac0000;color:#fff;text-align:center;}
+#groupStage .tg .tg-pts1{font-family: 'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size:1em;background-color:#ac0000;color:#fff;text-align:center;}
+#groupStage .tg .tg-image1{background-color: #ac0000;text-align:center;border-right:none;}
+#groupStage .tg .tg-image2{text-align:center;border-right:none;}
+#groupStage .tg img{max-height:15px;max-width:15px;padding-right:2px;}
+
+.hidden{display:none;}
+
+
+@media screen and (max-width: 800px) {
+    .active {
+        display: block;
+    }
+    .nav > li {
+        float: none;
+        border-top: 1px solid #ce0000;
+    }
+    .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav li li .parent {
+        background-image: url("http://www.chartophile.com/img/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+    .nav li li li a {
+    padding: 4px 15px;
+    background:#249578;
+    border-top: 1px solid #1d7a62;
+    font-size:.9em;
+}
+
+    .sidebar-container{
+      display: none;
+    }
+    }
+    
+@media screen and (device-width: 320px),(device-width: 360px){
+    .active {
+        display: block;
+    }
+    .nav > li {
+        float: none;
+        border-top: 1px solid #ce0000;
+    }
+    .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav li li .parent {
+        background-image: url("http://www.chartophile.com/img/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+    .nav li li li a {
+    padding: 4px 15px;
+    background:#249578;
+    border-top: 1px solid #1d7a62;
+    font-size:.9em;
+}
+
+    .sidebar-container{
+      display: none;
+    }
+    
+    iframe{max-width:280px;max-height:210px;}
+    
+.leaflet-popup-content {background:rgb(255, 255, 255);max-height: 450px;overflow: auto;}
+.leaflet-popup-content-wrapper {box-shadow:0px 0px 4px 1px rgba(50%,50%,50%,0.25) !important;border: 1px solid #dadada;}
+
+#popup-table .popup-table {border-collapse:collapse;border-spacing:0;}
+#popup-table .popup-table td{font-family:'AvenirNext-Regular','AvenirLTStd-Light','Didact Gothic',"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:.75em;padding:0px 2px;border:none;overflow:hidden;word-break:normal;text-align:center;vertical-align:middle;}
+#popup-table .popup-table th{font-family:'AvenirLTStd-Heavy',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:.75em;padding:5px 5px;border:none;overflow:hidden;word-break:normal;}
+#popup-table .popup-table .popup-info{color:#333;font-size:.9em;text-align:center;padding-top:.5em;max-width:280px;line-height:1em}
+#popup-table .popup-table .popup-away{font-size:.9em;padding-left:3px;}
+#popup-table .popup-table .popup-comp{color:#ac0000; text-align:center;}
+#popup-table .popup-table .popup-home{font-size:.9em;padding-right:3px;}
+#popup-table .popup-table .popup-score{font-size:1.1em;color:#ac0000;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-logo{text-align:center;}
+#popup-table .popup-table .popup-logo img{max-height:30px;max-width:30px;padding:0px 2px 4px 2px;vertical-align:middle;}
+#popup-table .popup-table .popup-extra{color:#ac0000;font-size:.5em;}
+#popup-table .popup-table .popup-result{border-bottom:2px solid #ac0000;}
+#popup-table .popup-table tr.popup-firstGoal >td {padding-top:1em;}
+#popup-table .popup-table .popup-awaygoal{font-size:.75em;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-time{font-size:.75em;color:#ac0000;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-homegoal{font-size:.75em;text-align:center;padding:0px;}
+#popup-table .popup-table .popup-video{border-top:1px solid #ac0000;text-align:center; padding-top:7px;}
+    }

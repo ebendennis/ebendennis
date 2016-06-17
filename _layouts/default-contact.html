@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+	Phantom by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        {% include header.html %}
+
+        {% include menu.html %}
+
+        <!-- Main -->
+					<div id="main">
+						<div class="inner">
+            {{ content }}
+            </div>
+          </div>
+      <footer id="footer">
+        <div class="inner">
+        {% include contact.html %}
+        {% include footer.html %}
+        </div>
+      </footer>
+
+      </div> <!-- end Wrapper -->
+
+      {% include scripts.html %}
+
+  </body>
+
+</html>

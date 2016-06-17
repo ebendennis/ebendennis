@@ -1,61 +1,20 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
 title: ebendennis.github.io
-email: eben@chartophile.com
+email: eben@crosstie.io
 description: > # this means to ignore newlines until "baseurl:"
   Cartography | Web Mapping | Desktop GIS
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ebendennis.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 twitter_username: ebendennis
 github_username:  ebendennis
 
 # Build settings
 markdown: kramdown
-
-# Prose settings
-prose:
-  rooturl: '_posts'
-  siteurl: 'http://ebendennis.github.io/blog/'
-  relativeLinks: ''
-  media: 'media'
-  ignore:
-    - index.md
-    - _config.yml
-    - /_layouts
-    - /_includes
-  metadata:
-    _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "tags"
-        field:
-          element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose Tags"
-          options:
-            - name: "Maps"
-              value: "maps"
-            - name: "Icon"
-              value: "icon"
-            - name: "Other"
-              value: "other"
-      - name: "title"
-        field:
-          element: "text"
-          label: "title"
-      - name: "date"
-        field:
-          element: "text"
-          label: "Date"
-          value: "CURRENT_DATETIME"
-    _posts/static:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "page"
-      - name: "permalink"
-        field:
-          element: "text"
-          label: "Permalink"
-          value: ""
+exclude: [node_modules, gulpfile.js, README.md]
