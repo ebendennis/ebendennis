@@ -29,7 +29,7 @@
 			});
 
 		// Touch?
-			if (skel.vars.touch)
+			if (skel.vars.mobile)
 				$body.addClass('is-touch');
 
 		// Forms.
