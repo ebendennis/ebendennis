@@ -5,8 +5,8 @@ icon: map-o
 ---
 ## User Centered Design Applications
 
-Expert Applications: \\
-**[Mulberry - Riverside](mulberry-riverside) \\
+Expert Applications:  
+**[Mulberry - Riverside](mulberry-riverside)  
 [Massey Draw](massey-draw)**
 
 Public Applications:
