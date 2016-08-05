@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Massey Draw</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src="https://use.typekit.net/wnn1iux.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.1/mapbox-gl.css' rel='stylesheet' />
+  <!--[if lte IE 8]><script src="http://iconengineering.github.io/assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="http://iconengineering.github.io/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="http://iconengineering.github.io/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="http://iconengineering.github.io/assets/css/ie9.css" /><![endif]-->
+  <noscript><link rel="stylesheet" href="http://iconengineering.github.io/assets/css/noscript.css" /></noscript>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-68256524-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <style>
+         body { margin:0; padding:0; }
+         #map { position:absolute; top:52px; bottom:0; width:100%; }
+         button { box-shadow:none; height: inherit; line-height: 14px; padding: 0 6px;}
+         @media screen and (max-width: 736px) {
+           #map { position:absolute; top:44px; bottom:0; width:100%; }
+         }
+     </style>
+
+</head>
+  <body>
+    <style>
+#menu {
+			position: absolute;
+			bottom: 2em;
+			right: 1em;
+			z-index:99;
+			background: #fff;
+			padding: 10px;
+	}
+</style>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v0.0.0/mapbox-gl-geocoder.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v0.0.0/mapbox-gl-geocoder.css' type='text/css' />
+
+<!-- Header -->
+	<header id="header">
+    <h1><a href="http://iconengineering.github.io/index.html">ICON <span>Engineering, Inc.</span></a></h1>
+    <nav id="nav">
+      <ul>
+				<li><a href="#"><h1 style="left:0">Massey Draw</h1></a></li>
+        <li><a href="http://iconengineering.github.io/index.html">Home</a></li>
+				<li>
+					<a href="#" class="button submenu fa-angle-down">Layers</a>
+					<ul id="navButtons">
+						<li id="golfCourse" class="display"><a href="#" id="golfCourseM" class="display" onclick="toggleLayer('golfCourse', 'golfCourseMobile', 'DeerCreekCC')">Deer Creek CC</a></li>
+						<li id="contours" class="display"><a id="contoursM" href="#" class="display" onclick="toggleThree('contours','contoursMobile','1ftContours','5ftContours','5ftLabels')">Contours</a></li>
+						<li id="effective" class="display"><a id="effectiveM" href="#" class="display" onclick="toggleLayer('effective','effectiveMobile','effectivesfha')">Effective 100-year Floodplain</a></li>
+						<li id="proposed" class=""><a id="proposedM" href="#" class="" onclick="toggleTwo('proposed','proposedMobile','proposedfw','proposed100')">Proposed Floodplain</a></li>
+						<li id="improvements" class=""><a href="#" id="improvementsM" class="" onclick="toggleFour('improvements', 'improvementsMobile', 'culvert-case', 'culvert', 'grading','bridges')">Proposed Improvements</a></li>
+						<li id="flowdepth" class=""><a href="#" id="flowdepthM" class="" onclick="toggleNine('flowdepth', 'flowdepthMobile', 'flowDepth2','flowDepth3','flowDepth4','flowDepth5','flowDepth6','flowDepth7','flowDepth8','xs19','xs19Labels')">Existing Flow Depth</a></li>
+						<li id="parcels" class=""><a href="#" id="parcelsM" class="" onclick="toggleLayer('parcels', 'parcelsMobile', 'parcels')">Impacted Parcels</a></li>
+					</ul>
+				</li>
+      </ul>
+    </nav>
+  </header>
+
+	<div id='menu'>
+	    <input id='basic' type='radio' name='rtoggle' value='cihxv74vo00oynpm48wsujwo3' checked='checked'>
+	    <label for='basic'>Satellite</label>
+	    <input id='light' type='radio' name='rtoggle' value='cikh67rk8004n9vkouhls14s4'>
+	    <label for='light'>Light</label>
+	</div>
+
+	<div id="legendContainer">
+		<div id="legend" class='my-legend'>
+		<h6>Legend</h6>
+		<div class='legend-scale'>
+			<div class="legend-item">Existing Conditions Flow Depth (ft)</div>
+		  <ul class='legend-labels'>
+		    <li><span style='background:#feebe2;'></span>.25 - .5</li>
+		    <li><span style='background:#fcc5c0;'></span>.5 - 1</li>
+		    <li><span style='background:#fa9fb5;'></span>1 - 1.5</li>
+		    <li><span style='background:#f768a1;'></span>1.5 - 2</li>
+		    <li><span style='background:#dd3497;'></span>2 - 3</li>
+		    <li><span style='background:#ae017e;'></span>3 - 4</li>
+		    <li><span style='background:#7a0177;'></span>4+</li>
+		  </ul>
+		</div>
+		<div class='legend-scale2'>
+			<div class="legend-item">Proposed Flood Hazard Areas</div>
+		  <ul class='legend-labels2'>
+		    <li><span style='background:#0088ff;'></span>Floodway</li>
+		    <li><span style='background:#00d7ff;'></span>100-year Floodplain</li>
+		  </ul>
+		</div>
+		<div class='legend-source'>Source: Prepared by <a href="http://www.iconeng.com">ICON Engineering</a> for UDFCD and Jefferson County</div>
+		</div>
+	</div>
+
+<div id="map"></div>
+
+    <!-- Scripts -->
+      <script src="http://iconengineering.github.io/assets/js/jquery.min.js"></script>
+      <script src="http://iconengineering.github.io/assets/js/map.dropotron.js"></script>
+      <script src="http://iconengineering.github.io/assets/js/jquery.scrollex.min.js"></script>
+      <script src="http://iconengineering.github.io/assets/js/skel.min.js"></script>
+      <script src="http://iconengineering.github.io/assets/js/map-util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="http://iconengineering.github.io/assets/js/map-main.js"></script>
+
+  </body>
+
+  <script src="http://iconengineering.github.io/assets/maps/massey-draw.js"></script>
+
+</html>
