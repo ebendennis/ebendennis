@@ -9,4 +9,6 @@ Expert Applications:
 **[Mulberry - Riverside](mulberry-riverside)  
 [Massey Draw](massey-draw)**
 
-Public Applications:
+Public Applications:  
+**[Public A](public-a)  
+[Public B](public-b)**
