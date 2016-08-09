@@ -241,6 +241,36 @@ _:-ms-input-placeholder, :root .demo-graph {
 .page-content {
   padding: 0 8px 8px 0;
 }
+
+.mdl-layout__header-row {
+	height:50px;
+}
+
+.mdl-layout-desc {
+	text-align:left;
+	margin:60px -10px 15px -540px;
+	display:block;		
+}
+
+.first-drawer {
+	margin:50px 0px 0px 0px;
+}
+
+.legend {
+	font-size:14px;
+	font-weight:bold;
+	padding:0;
+	margin:0;
+}
+
+.mdl-list {
+	margin:0;
+}
+
+.demo-legend-item {
+	margin:10px 0px;
+}
+
 .map-dialog {
   height: calc(100vh - 144px);
   max-height: calc(100vh - 144px);
