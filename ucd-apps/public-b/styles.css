@@ -241,9 +241,9 @@ _:-ms-input-placeholder, :root .demo-graph {
 .page-content {
   padding: 0 8px 8px 0;
 }
-.large-dialog {
+.map-dialog {
+  height: calc(100vh - 80px);
   max-height: calc(100vh - 80px);
   overflow-y: scroll;
-  width: 85%;
-  max-width: 512px;
+  margin-top: 0;
 }

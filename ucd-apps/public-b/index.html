@@ -22,7 +22,7 @@
 
     </script>
  <style>
-    #map { position:absolute; height: calc(100vh - 96px); width: calc(100vw - 280px); }
+    #map { position:absolute; height: calc(100vh - 96px); width: calc(50vw - 156px); }
     #geocoder-container {
     position: absolute;
     top: 4px;
@@ -35,7 +35,7 @@
     }
     .first-drawer { margin-top: 64px; }
     @media only screen and (max-width: 1024px) {
-      #map {height: calc(100vh - 96px); width: calc(100vw - 40px);}
+      #map {height: calc(100vh - 96px); width: calc(100vw - 56px);}
       .first-drawer { margin-top: 56px; }
     }
   </style>
@@ -102,14 +102,14 @@
             </button>
           </li>
           <dialog id="yesDialog" class="mdl-dialog large-dialog">
-            <h4 class="mdl-dialog__title">What To Do if You're in the Floodplain</h4>
-            <div class="mdl-dialog__content">
+            <h4 class='mdl-dialog__title'>What To Do if You're in the Floodplain</h4>
+            <div class='mdl-dialog__content'>
               <h5>Insurance:</h5>
               <p>
                 You can purchase insurance from a licensed private insurance company or an independent property and casualty insurance agent. This is usually your homeowner's insurance agent. Any local insurance agent can sell an insurance policy and legally must charge the same rate.
               </p>
               <p>
-                To find a qualified agent, call toll-free at 1-888-379-9531 or visit <a href="http://www.floodsmart.gov" target="_blank">www.floodsmart.gov</a> and then select “Agent Locator” under “Resources.”
+                To find a qualified agent, call toll-free at 1-888-379-9531 or visit <a href='http://www.floodsmart.gov' target='_blank'>www.floodsmart.gov</a> and then select 'Agent Locator' under 'Resources.'
               </p>
               <p>
                 When purchasing flood insurance, the insurance agent may ask for an Elevation Certificate or Floodproofing Certificate. These certificates identify protection measures that may have been incorporated into the building's construction and are used to determine the annual premium costs for an insurance policy.
@@ -153,7 +153,10 @@
   </div>
   <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid page-content">
-      <div class='map-grid mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid'>
+      <div id="content" class='map-dialog mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-grid'>
+        Content
+      </div>
+      <div class='map-grid mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-grid'>
         <div id="map"></div>
         <div id='geocoder-container'></div>
       </div>
