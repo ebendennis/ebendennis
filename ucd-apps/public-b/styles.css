@@ -249,7 +249,8 @@ _:-ms-input-placeholder, :root .demo-graph {
 .mdl-layout-desc {
 	text-align:left;
 	margin:60px -10px 15px -540px;
-	display:block;		
+	display:block;	
+  font-weight:bold;	
 }
 
 .first-drawer {
@@ -277,10 +278,18 @@ _:-ms-input-placeholder, :root .demo-graph {
   overflow-y: auto;
   margin-top: 0;
 }
+
 .geocoder {
   margin-top: 0;
 }
 .mapboxgl-ctrl-geocoder input[type='text'] {
   font-size: 1em !important;
   font-family: Roboto, Helvetica, sans-serif !important;
+}
+
+#content p {
+  padding:15px;
+  font-size:16px;
+  line-height:24px;
+  color:#888;
 }
