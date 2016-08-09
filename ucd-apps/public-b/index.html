@@ -22,18 +22,21 @@
 
     </script>
  <style>
-    #map { position:absolute; height: calc(100vh - 96px); width: calc(50vw - 156px); }
+    #map { position:absolute; height: calc(100vh - 160px); width: calc(50vw - 156px); }
     #geocoder-container {
     position: relative;
     width: 100%;
     }
     #geocoder-container > div {
-    min-width:50%;
-    margin-left:10%;
+    width:100%;
+    }
+    .mapboxgl-ctrl-geocoder {
+      max-width: 100% !important;
+      box-shadow: none !important;
     }
     .first-drawer { margin-top: 64px; }
     @media only screen and (max-width: 1024px) {
-      #map {height: calc(100vh - 96px); width: calc(100vw - 56px);}
+      #map {height: calc(100vh - 160px); width: calc(100vw - 56px);}
       .first-drawer { margin-top: 56px; }
     }
   </style>
@@ -49,9 +52,7 @@
     <div class="mdl-layout__header-row">
     <span class="mdl-layout-title">City of Boulder Floodplain Info</span>
       <div class="mdl-layout-spacer"></div>
-        <div id='geocoder-container'></div>
-      </div>
-    </header>
+    </div>
   </header>
   <div class="demo-drawer mdl-layout__drawer mdl-color--grey-100 mdl-color-text--grey-600 mdl-shadow--0dp">
     <div class="mdl-grid drawer-grid">
@@ -144,6 +145,9 @@
   </div>
   <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid page-content">
+    <div class='mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid geocoder'>
+      <div id='geocoder-container'></div>
+    </div>
       <div id="content" class='map-dialog mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-grid'>
         Content
       </div>

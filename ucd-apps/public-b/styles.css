@@ -231,7 +231,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 }
 .map-grid {
   position: relative;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 144px);
   margin-top: 0;
 }
 .drawer-grid {
@@ -242,8 +242,11 @@ _:-ms-input-placeholder, :root .demo-graph {
   padding: 0 8px 8px 0;
 }
 .map-dialog {
-  height: calc(100vh - 80px);
-  max-height: calc(100vh - 80px);
+  height: calc(100vh - 144px);
+  max-height: calc(100vh - 144px);
   overflow-y: scroll;
+  margin-top: 0;
+}
+.geocoder {
   margin-top: 0;
 }
