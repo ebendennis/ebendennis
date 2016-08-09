@@ -24,14 +24,12 @@
  <style>
     #map { position:absolute; height: calc(100vh - 96px); width: calc(50vw - 156px); }
     #geocoder-container {
-    position: absolute;
-    top: 4px;
+    position: relative;
     width: 100%;
-    margin-top: 10px;
     }
     #geocoder-container > div {
     min-width:50%;
-    margin-left:25%;
+    margin-left:10%;
     }
     .first-drawer { margin-top: 64px; }
     @media only screen and (max-width: 1024px) {
@@ -51,14 +49,7 @@
     <div class="mdl-layout__header-row">
     <span class="mdl-layout-title">City of Boulder Floodplain Info</span>
       <div class="mdl-layout-spacer"></div>
-        <button class="mdl-button mdl-js-button mdl-button--icon mdl-color-text--grey-600 mdl-cell--hide-tablet" id="hdrbtn">
-          <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-          <li class="mdl-menu__item" onclick="printCanvas()">Print</li>
-          <li class="mdl-menu__item">Contact</li>
-          <li class="mdl-menu__item">Legal information</li>
-        </ul>
+        <div id='geocoder-container'></div>
       </div>
     </header>
   </header>
@@ -158,7 +149,6 @@
       </div>
       <div class='map-grid mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-grid'>
         <div id="map"></div>
-        <div id='geocoder-container'></div>
       </div>
     </div>
   </main>
