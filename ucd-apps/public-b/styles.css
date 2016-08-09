@@ -250,3 +250,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 .geocoder {
   margin-top: 0;
 }
+.mapboxgl-ctrl-geocoder input[type='text'] {
+  font-size: 1em !important;
+  font-family: Roboto, Helvetica, sans-serif !important;
+}
