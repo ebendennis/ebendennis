@@ -87,59 +87,6 @@
       <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-shadow--2dp mdl-grid">
         <span class="demo-section-title mdl-color-text--grey-600" style="width: 100%;text-align: center;">Am I in the Floodplain?</span>
         <span>Search to find out.</span>
-        <ul style="list-style-type:none;padding-left:0">  
-          <li>
-            <button id="yesButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" style="margin-bottom:8px;" disabled>
-              Yes
-            </button>
-          </li>
-          <dialog id="yesDialog" class="mdl-dialog large-dialog">
-            <h4 class='mdl-dialog__title'>What To Do if You're in the Floodplain</h4>
-            <div class='mdl-dialog__content'>
-              <h5>Insurance:</h5>
-              <p>
-                You can purchase insurance from a licensed private insurance company or an independent property and casualty insurance agent. This is usually your homeowner's insurance agent. Any local insurance agent can sell an insurance policy and legally must charge the same rate.
-              </p>
-              <p>
-                To find a qualified agent, call toll-free at 1-888-379-9531 or visit <a href='http://www.floodsmart.gov' target='_blank'>www.floodsmart.gov</a> and then select 'Agent Locator' under 'Resources.'
-              </p>
-              <p>
-                When purchasing flood insurance, the insurance agent may ask for an Elevation Certificate or Floodproofing Certificate. These certificates identify protection measures that may have been incorporated into the building's construction and are used to determine the annual premium costs for an insurance policy.
-              </p>
-              <h5>Amending the Map:</h5>
-              <p>
-                If your structure is elevated or if your property was incorrectly mapped in the regulated floodplain, you may request that it be removed from the floodplain. Contact a licensed land surveyor to determine if your property qualifies for a Letter of Map Amendment to potentially remove your property from the floodplain. Although Boulder’s floodplain mitigation and regulation is aligned with a 100-year flood, that doesn’t mean flooding can’t happen outside of the floodplain at any time.
-              </p>
-              <h5>Elevation and Floodproofing Certificates:</h5>
-              <p>
-                Only Elevation Certificates apply to residential structures, since FEMA does not recognize floodproofing measures for residential construction. If the lowest floor of a dwelling and its associated structures are located above the 100-year flood elevation, insurance premium costs are reduced. For new residential construction in Boulder, the lowest floor and associated structures must be constructed a minimum of two feet above the 100-year flood elevation.
-              </p>
-              <p>
-                Elevation Certificates must be prepared and certified by a Colorado-registered professional land surveyor. Floodproofing Certificates must be prepared and certified by a Colorado-registered professional engineer or architect.
-            </div>
-            <div class="mdl-dialog__actions">
-              <button type="button" class="mdl-button close mdl-button--accent">Close</button>
-            </div>
-          </dialog>
-          <li>
-            <button id="noButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="margin-bottom:8px;" disabled>
-              No
-            </button>
-          </li>
-          <dialog id="noDialog" class="mdl-dialog">
-            <div class="mdl-dialog__content">
-              <h5>Good news! Nothing to see here!</h5>
-            </div>
-            <div class="mdl-dialog__actions">
-              <button type="button" class="mdl-button close mdl-button--accent">Close</button>
-            </div>
-          </dialog>
-          <li>
-            <button id="geocodeButton" class="mdl-button mdl-js-button mdl-button--raised" disabled>
-              I'm Not Sure
-            </button>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -158,36 +105,11 @@
   </main>
 </div>
 
-<script>
-    var noDialog = document.querySelector('#noDialog');
-    var showNoDialogButton = document.querySelector('#noButton');
-    if (! noDialog.showModal) {
-      noDialogPolyfill.registerDialog(noDialog);
-    }
-    showNoDialogButton.addEventListener('click', function() {
-      noDialog.showModal();
-    });
-    noDialog.querySelector('.close').addEventListener('click', function() {
-      noDialog.close();
-    });
-
-    var yesDialog = document.querySelector('#yesDialog');
-    var showYesDialogButton = document.querySelector('#yesButton');
-    if (! yesDialog.showModal) {
-      yesDialogPolyfill.registerDialog(yesDialog);
-    }
-    showYesDialogButton.addEventListener('click', function() {
-      yesDialog.showModal();
-    });
-    yesDialog.querySelector('.close').addEventListener('click', function() {
-      yesDialog.close();
-    });
-</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="http://iconengineering.github.io/assets/js/toggleLayer.js"></script>
-<script src="ucd-public-v20.js">
-</script>
+<script src="multiFloodplain.js"></script>
+<script src="ucd-public-v20.js"></script>
 
 </body>
 </html>
