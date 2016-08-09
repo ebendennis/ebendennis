@@ -244,7 +244,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 .map-dialog {
   height: calc(100vh - 144px);
   max-height: calc(100vh - 144px);
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 0;
 }
 .geocoder {
