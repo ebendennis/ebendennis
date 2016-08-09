@@ -50,20 +50,21 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
   <header class="demo-header mdl-layout__header mdl-layout__header--transparent mdl-color--grey-100 mdl-color-text--grey-600">
     <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">City of Boulder Floodplain Info</span>
-      <div class="mdl-layout-spacer"></div>
+    <span class="mdl-layout-title"><a href="file:///Users/robertsoden/www/ebendennis.github.io/ucd-apps/public-b/index.html">Welcome to the City of Boulder Floodplain Information Site</a></span>
+	<span class="mdl-layout-desc">Use the address search bar below to determine the status of a property</span>
     </div>
   </header>
   <div class="demo-drawer mdl-layout__drawer mdl-color--grey-100 mdl-color-text--grey-600 mdl-shadow--0dp">
     <div class="mdl-grid drawer-grid">
       <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-shadow--2dp mdl-grid first-drawer">
+		<h3 class="legend">Map Legend</h3>
         <ul class="demo-list-icon mdl-list">
           <li class="demo-legend-item mdl-list__item mdl-color-text--grey-600">
             <span class="mdl-list__item-primary-content">
             <i class="material-icons mdl-list__item-icon" style="color: #e74c3c;">fiber_manual_record</i>
             </span>
             <span class="demo-list-secondary mdl-list__item-secondary-content">
-            Location
+            Mapped Address
             </span>
           </li>
           <li class="demo-legend-item mdl-list__item mdl-color-text--grey-600">
@@ -71,7 +72,7 @@
             <i class="material-icons mdl-list__item-icon" style="color: #2196F3;">stop</i>
             </span>
             <span class="demo-list-secondary mdl-list__item-secondary-content">
-            Flood Zone
+            100 Year Floodplain
             </span>
           </li>
           <li class="demo-legend-item mdl-list__item mdl-color-text--grey-600">
@@ -84,10 +85,6 @@
           </li>
         </ul>
       </div>
-      <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-shadow--2dp mdl-grid">
-        <span class="demo-section-title mdl-color-text--grey-600" style="width: 100%;text-align: center;">Am I in the Floodplain?</span>
-        <span>Search to find out.</span>
-      </div>
     </div>
   </div>
   <main class="mdl-layout__content mdl-color--grey-100">
@@ -95,16 +92,17 @@
     <div class='mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid geocoder'>
       <div id='geocoder-container'></div>
     </div>
+    <div class='map-grid mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-grid'>
+      <div id="map"></div>
+    </div>
       <div id="content" class='map-dialog mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-grid'>
-        Content
-      </div>
-      <div class='map-grid mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-grid'>
-        <div id="map"></div>
+        <p>FEMA requires that homes with federally backed mortages that are located within the 100-year floodplain purchase flood insurance. Use this site to determine the status of your property and your options for insurance.
+			<br /> <br />
+Boulder is the most at-risk city in Colorado for flash flood. Even if your home is not in the floodplain, we highly recommend you take measures to <a href='https://bouldercolorado.gov/flood/protect-your-property'>protect your property</a> and <a href='https://bouldercolorado.gov/flood/prepare-for-floods'>protect yourself</a>.</p>
       </div>
     </div>
   </main>
 </div>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="http://iconengineering.github.io/assets/js/toggleLayer.js"></script>
