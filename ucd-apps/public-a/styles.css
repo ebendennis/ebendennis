@@ -231,7 +231,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 }
 .map-grid {
   position: relative;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 144px);
   margin-top: 0;
 }
 .drawer-grid {
@@ -241,9 +241,55 @@ _:-ms-input-placeholder, :root .demo-graph {
 .page-content {
   padding: 0 8px 8px 0;
 }
-.large-dialog {
-  max-height: calc(100vh - 80px);
-  overflow-y: scroll;
-  width: 85%;
-  max-width: 512px;
+
+.mdl-layout__header-row {
+	height:50px;
+}
+
+.mdl-layout-desc {
+	text-align:left;
+	margin:60px -10px 15px -540px;
+	display:block;	
+  font-weight:bold;	
+}
+
+.first-drawer {
+	margin:50px 0px 0px 0px;
+}
+
+.legend {
+	font-size:14px;
+	font-weight:bold;
+	padding:0;
+	margin:0;
+}
+
+.mdl-list {
+	margin:0;
+}
+
+.demo-legend-item {
+	margin:10px 0px;
+}
+
+.map-dialog {
+  height: calc(100vh - 144px);
+  max-height: calc(100vh - 144px);
+  overflow-y: auto;
+  margin-top: 0;
+}
+
+.geocoder {
+  margin-top: 0;
+}
+.mapboxgl-ctrl-geocoder input[type='text'] {
+  font-size: 1em !important;
+  font-family: Roboto, Helvetica, sans-serif !important;
+}
+
+#content p {
+  padding:15px;
+  font-size:16px;
+  line-height:24px;
+  color:#888;
 }
