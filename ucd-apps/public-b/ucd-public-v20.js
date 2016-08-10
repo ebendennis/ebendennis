@@ -41,7 +41,7 @@ map.on('load', function() {
         "filter": ["==", "ZONEDESC", "100 Year"],
         "paint": {
             'fill-color': '#2196F3',
-            'fill-opacity': 0.8
+            'fill-opacity': 0.6
         }
     }, 'road-label-small');
 
@@ -49,13 +49,10 @@ map.on('load', function() {
         "id": "floodExtents",
         "source": "flooding",
         "source-layer": "Flood2013Extents",
-        "type": "line",
+        "type": "fill",
         "paint": {
-            'line-width': {
-                "stops": [[15, 1], [17, 1.75], [19, 2.5]]
-            },
-            'line-color': '#2c3e50',
-            'line-opacity': 0.8
+            'fill-color': '#0F2A45',
+            'fill-opacity': 0.4
         }
     }, 'road-label-small');
 
