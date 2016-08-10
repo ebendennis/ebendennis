@@ -109,7 +109,7 @@
           <li class="demo-list-item mdl-list__item mdl-list__item--two-line mdl-color-text--grey-400">
             <span class="mdl-list__item-primary-action">
               <label class="mdl-switch mdl-js-switch label-on" for="aoi">
-                <input type="checkbox" id="aoi" class="mdl-switch__input layer-on" onclick="toggleTwo('aoi','aoi-fill')" checked/>
+                <input type="checkbox" id="aoi" class="mdl-switch__input layer-on" onclick="toggleTwo('aoi-line','aoi-fill')" checked/>
               </label>
             </span>
             <span class="mdl-list__item-secondary-content">
@@ -121,6 +121,16 @@
             <i class="material-icons" style="color: #829191;">crop_16_9</i>
           </li>
         </ul>
+        <div class="mdl-color-text--grey-400">
+          <!-- Slider with Starting Value -->
+          <div>Highlight Areas of Deposition Larger Than: <span id='fillSlider-value'>0 ft<sup>3</sup></span></div>
+          <input id='fillSlider' class="mdl-slider mdl-js-slider" type="range" min="0" max="1000000" value="0" step="10000" tabindex="0">
+        </div>
+        <div class="mdl-color-text--grey-400">
+          <!-- Slider with Starting Value -->
+          <div>Highlight Areas of Erosion Larger Than: <span id='cutSlider-value'>0 ft<sup>3</sup></span></div>
+          <input id='cutSlider' class="mdl-slider mdl-js-slider" type="range" min="0" max="1000000" value="0" step="10000" tabindex="0">
+        </div>
       </div>
     </nav>
   </div>

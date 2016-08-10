@@ -34,6 +34,11 @@ function printCanvas() {
     w.document.body.appendChild(img);
 }
 
+var fillSlider = document.getElementById('fillSlider');
+var fillSliderValue = document.getElementById('fillSlider-value');
+var cutSlider = document.getElementById('cutSlider');
+var cutSliderValue = document.getElementById('cutSlider-value');
+
 map.on('style.load', function () {
 
     map.addSource('fillPts', {
@@ -43,6 +48,10 @@ map.on('style.load', function () {
     map.addSource('cutPts', {
       type: 'vector',
       url: 'mapbox://iconeng.b7a321b8'
+    });
+    map.addSource('sedimentPolys', {
+      type: 'vector',
+      url: 'mapbox://iconeng.5144be08'
     });
     map.addSource('aoi', {
       type: 'geojson',
@@ -64,7 +73,7 @@ map.on('style.load', function () {
     },'road-label-small');
 
     map.addLayer({
-        'id': 'aoi',
+        'id': 'aoi-line',
         'type': 'line',
         'source': 'aoi',
         'layout': {
@@ -77,9 +86,79 @@ map.on('style.load', function () {
               "stops": [[13, .5], [15, 1],[17, .5]]
           },
           'line-opacity': {
-              "stops": [[13, 1], [15, .5],[17, .25]]
+              "stops": [[13, .75], [15, .5],[17, .25]]
           },
             'line-color': '#829191'
+        }
+    },'road-label-small');
+
+    map.addLayer({
+        'id': 'cutFill',
+        'type': 'fill',
+        'source': 'sedimentPolys',
+        'source-layer': 'CutAreas',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'fill-color': '#2c3e50',
+            'fill-opacity': 0.5
+        }
+    },'road-label-small');
+
+    map.addLayer({
+        'id': 'cutLine',
+        'type': 'line',
+        'source': 'sedimentPolys',
+        'source-layer': 'CutAreas',
+        'layout': {
+            'visibility': 'visible',
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        'paint': {
+          'line-width': {
+              "stops": [[13, 1], [15, 2],[17, 5]]
+          },
+          'line-opacity': {
+              "stops": [[13, 1], [15, .5],[17, .25]]
+          },
+            'line-color': '#2c3e50'
+        }
+    },'road-label-small');
+
+    map.addLayer({
+        'id': 'fillFill',
+        'type': 'fill',
+        'source': 'sedimentPolys',
+        'source-layer': 'FillAreas',
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'fill-color': '#e74c3c',
+            'fill-opacity': 0.5
+        }
+    },'road-label-small');
+
+    map.addLayer({
+        'id': 'fillLine',
+        'type': 'line',
+        'source': 'sedimentPolys',
+        'source-layer': 'FillAreas',
+        'layout': {
+            'visibility': 'visible',
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        'paint': {
+          'line-width': {
+              "stops": [[13, 1], [15, 2],[17, 5]]
+          },
+          'line-opacity': {
+              "stops": [[13, 1], [15, .5],[17, .25]]
+          },
+            'line-color': '#e74c3c'
         }
     },'road-label-small');
 
@@ -163,6 +242,31 @@ map.on('style.load', function () {
             },
             'circle-color': '#e74c3c'
         }
+    });
+
+
+    fillSlider.addEventListener('input', function(e) {
+        // Adjust the layers opacity. layer here is arbitrary - this could
+        // be another layer name found in your style or a custom layer
+        // added on the fly using `addSource`.
+        console.log(parseInt(e.target.value, 10));
+        map.setFilter('fillFill', [">=", "VOLUME", parseInt(e.target.value, 10)]);
+        map.setFilter('fillLine', [">=", "VOLUME", parseInt(e.target.value, 10)]);
+
+        // Value indicator
+        fillSliderValue.innerHTML = e.target.value + ' ft<sup>3</sup>';
+    });
+
+    cutSlider.addEventListener('input', function(e) {
+        // Adjust the layers opacity. layer here is arbitrary - this could
+        // be another layer name found in your style or a custom layer
+        // added on the fly using `addSource`.
+        console.log(parseInt(e.target.value, 10));
+        map.setFilter('cutFill', [">=", "VOLUME", parseInt(e.target.value, 10)]);
+        map.setFilter('cutLine', [">=", "VOLUME", parseInt(e.target.value, 10)]);
+
+        // Value indicator
+        cutSliderValue.innerHTML = e.target.value + ' ft<sup>3</sup>';
     });
 
 }); //end style load
