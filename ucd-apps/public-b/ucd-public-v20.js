@@ -1,12 +1,20 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiaWNvbmVuZyIsImEiOiJjaXBwc2V1ZnMwNGY3ZmptMzQ3ZmJ0ZXE1In0.mo_STWygoqFqRI-od05qFg';
 
+
+var bounds = [
+    [-105.301758, 39.964069], // Southwest coordinates
+    [-105.178197, 40.094551]  // Northeast coordinates
+];
+
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
     zoom: 11,
     center: [-105.2483, 40.0183],
     hash: true,
-    preserveDrawingBuffer: true
+    preserveDrawingBuffer: true,
+    maxBounds: bounds
+    
 });
 
 var geocoder = new mapboxgl.Geocoder({
@@ -41,7 +49,7 @@ map.on('load', function() {
         "filter": ["==", "ZONEDESC", "100 Year"],
         "paint": {
             'fill-color': '#2196F3',
-            'fill-opacity': 0.8
+            'fill-opacity': 0.6
         }
     }, 'road-label-small');
 
@@ -49,13 +57,10 @@ map.on('load', function() {
         "id": "floodExtents",
         "source": "flooding",
         "source-layer": "Flood2013Extents",
-        "type": "line",
+        "type": "fill",
         "paint": {
-            'line-width': {
-                "stops": [[15, 1], [17, 1.75], [19, 2.5]]
-            },
-            'line-color': '#2c3e50',
-            'line-opacity': 0.8
+            'fill-color': '#0F2A45',
+            'fill-opacity': 0.4
         }
     }, 'road-label-small');
 
