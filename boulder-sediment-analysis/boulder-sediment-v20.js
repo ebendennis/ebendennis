@@ -3,8 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaWNvbmVuZyIsImEiOiJjaXBwc2V1ZnMwNGY3ZmptMzQ3Z
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v9',
-    zoom: 12,
-    center: [-105.2411, 40.0198],
+    zoom: 10.75,
+    center: [-105.2403, 40.03],
     hash: true,
     preserveDrawingBuffer: true
 });
@@ -49,14 +49,63 @@ map.on('style.load', function () {
       type: 'vector',
       url: 'mapbox://iconeng.122e1c95'
     });
-    map.addSource('sedimentPolys', {
-      type: 'vector',
-      url: 'mapbox://iconeng.5144be08'
+    map.addSource('fillPolys', {
+      type: 'geojson',
+      data: 'FillAreas.geojson'
+    });
+    map.addSource('cutPolys', {
+      type: 'geojson',
+      data: 'CutAreas.geojson'
     });
     map.addSource('aoi', {
       type: 'geojson',
-      data: 'AOI.geojson'
+      data: 'StudyArea.geojson'
     });
+    map.addSource('cityLimits', {
+      type: 'geojson',
+      data: 'BoulderCityLimits.geojson'
+    });
+    map.addSource('hydrology', {
+      type: 'geojson',
+      data: 'stream.geojson'
+    });
+
+    map.addLayer({
+        'id': 'city',
+        'type': 'line',
+        'source': 'cityLimits',
+        'layout': {
+            'visibility': 'visible',
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        'paint': {
+          'line-width': {
+              "stops": [[13, 1.25], [15, 1.75],[17, 2]]
+          },
+          'line-opacity': .75,
+          'line-color': '#333',
+          'line-dasharray':[3,2]
+        }
+    },'road-label-small');
+
+    map.addLayer({
+        'id': 'streams',
+        'type': 'line',
+        'source': 'hydrology',
+        'layout': {
+            'visibility': 'visible',
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        'paint': {
+          'line-width': {
+              "stops": [[13, .75], [15, 1.25],[17, 2]]
+          },
+          'line-opacity': .75,
+          'line-color': '#3F51B5'
+        }
+    },'road-label-small');
 
     map.addLayer({
         'id': 'aoi-fill',
@@ -64,7 +113,7 @@ map.on('style.load', function () {
         'source': 'aoi',
         'maxzoom': 14,
         'layout': {
-            'visibility': 'visible'
+            'visibility': 'none'
         },
         'paint': {
             'fill-color': '#829191',
@@ -77,7 +126,7 @@ map.on('style.load', function () {
         'type': 'line',
         'source': 'aoi',
         'layout': {
-            'visibility': 'visible',
+            'visibility': 'none',
             'line-join': 'round',
             'line-cap': 'round'
         },
@@ -95,14 +144,14 @@ map.on('style.load', function () {
     map.addLayer({
         'id': 'cutFill',
         'type': 'fill',
-        'source': 'sedimentPolys',
-        'source-layer': 'CutAreas',
+        'source': 'cutPolys',
+        'interactive': true,
         'filter': [">=", "VOLUME", 500],
         'layout': {
             'visibility': 'visible'
         },
         'paint': {
-            'fill-color': '#2c3e50',
+            'fill-color': '#2196F3',
             'fill-opacity': 0.5
         }
     },'road-label-small');
@@ -110,8 +159,7 @@ map.on('style.load', function () {
     map.addLayer({
         'id': 'cutLine',
         'type': 'line',
-        'source': 'sedimentPolys',
-        'source-layer': 'CutAreas',
+        'source': 'cutPolys',
         'filter': [">=", "VOLUME", 500],
         'layout': {
             'visibility': 'visible',
@@ -125,21 +173,40 @@ map.on('style.load', function () {
           'line-opacity': {
               "stops": [[13, 1], [15, .5],[17, .25]]
           },
-            'line-color': '#2c3e50'
+            'line-color': '#2196F3'
+        }
+    },'road-label-small');
+
+    map.addLayer({
+        'id': 'cutHover',
+        'type': 'line',
+        'source': 'cutPolys',
+        'filter': [">=", "VOLUME", 500],
+        'layout': {
+            'visibility': 'visible',
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        'paint': {
+          'line-width': {
+              "stops": [[13, 1.5], [15, 2.5],[17, 5]]
+          },
+          'line-opacity': 1,
+            'line-color': '#2196F3'
         }
     },'road-label-small');
 
     map.addLayer({
         'id': 'fillFill',
         'type': 'fill',
-        'source': 'sedimentPolys',
-        'source-layer': 'FillAreas',
+        'source': 'fillPolys',
+        'interactive': true,
         'filter': [">=", "VOLUME", 500],
         'layout': {
             'visibility': 'visible'
         },
         'paint': {
-            'fill-color': '#e74c3c',
+            'fill-color': '#FF5722',
             'fill-opacity': 0.5
         }
     },'road-label-small');
@@ -147,8 +214,7 @@ map.on('style.load', function () {
     map.addLayer({
         'id': 'fillLine',
         'type': 'line',
-        'source': 'sedimentPolys',
-        'source-layer': 'FillAreas',
+        'source': 'fillPolys',
         'filter': [">=", "VOLUME", 500],
         'layout': {
             'visibility': 'visible',
@@ -162,7 +228,26 @@ map.on('style.load', function () {
           'line-opacity': {
               "stops": [[13, 1], [15, .5],[17, .25]]
           },
-            'line-color': '#e74c3c'
+            'line-color': '#FF5722'
+        }
+    },'road-label-small');
+
+    map.addLayer({
+        'id': 'fillHover',
+        'type': 'line',
+        'source': 'fillPolys',
+        'filter': [">=", "VOLUME", 500],
+        'layout': {
+            'visibility': 'visible',
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        'paint': {
+          'line-width': {
+              "stops": [[13, 1.5], [15, 2.5],[17, 5]]
+          },
+          'line-opacity': 1,
+          'line-color': '#FF5722'
         }
     },'road-label-small');
 
@@ -171,7 +256,6 @@ map.on('style.load', function () {
         'type': 'circle',
         'source': 'cutPts',
         'source-layer': 'cutPoints',
-        'interactive': true,
         'layout': {
             'visibility': 'visible'
         },
@@ -203,7 +287,7 @@ map.on('style.load', function () {
                     [{zoom: 19, value: 2000}, 32]
                     ]
             },
-            'circle-color': '#2c3e50'
+            'circle-color': '#2962FF'
         }
     });
 
@@ -212,7 +296,6 @@ map.on('style.load', function () {
         'type': 'circle',
         'source': 'fillPts',
         'source-layer': 'fillPoints',
-        'interactive': true,
         'layout': {
             'visibility': 'visible'
         },
@@ -244,10 +327,30 @@ map.on('style.load', function () {
                     [{zoom: 19, value: 2000}, 32]
                     ]
             },
-            'circle-color': '#e74c3c'
+            'circle-color': '#DD2C00'
         }
     });
 
+    map.addLayer({
+        'id': 'streamsLabels',
+        'type': 'symbol',
+        'source': 'hydrology',
+        'layout': {
+            'visibility': 'visible',
+          'symbol-placement': 'line',
+          'text-field': '{Name}',
+          'text-font': ['Roboto Light Italic','Open Sans Light Italic','Arial Unicode MS Regular'],
+          'text-size': {
+            "stops": [[13,8],[17,10],[19,12]]
+          }
+        },
+        'paint': {
+          'text-color': '#3F51B5',
+          'text-halo-color': 'rgba(250,250,250 ,0.9)',
+          'text-halo-width': 2,
+          'text-halo-blur': 0.5
+        }
+    });
 
     fillSlider.addEventListener('input', function(e) {
         // Adjust the layers opacity. layer here is arbitrary - this could
@@ -278,7 +381,7 @@ map.on('style.load', function () {
 // When a click event occurs near a marker icon, open a popup at the location of
 // the feature, with description HTML from its properties.
 map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['fillPts','cutPts'] });
+  var features = map.queryRenderedFeatures(e.point, { layers: ['fillFill','cutFill'] });
   if (!features.length) {
       return;
   }
@@ -294,9 +397,21 @@ map.on('click', function (e) {
 // Use the same approach as above to indicate that the symbols are clickable
 // by changing the cursor style to 'pointer'.
 map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['fillPts','cutPts'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['fillFill','cutFill'] });
+    if (features.length) {
+            map.setFilter("cutHover", ["==", "VOLUME", features[0].properties.VOLUME]);
+            map.setFilter("fillHover", ["==", "VOLUME", features[0].properties.VOLUME]);
+        } else {
+            map.setFilter("cutHover", ["==", "VOLUME", ""]);
+            map.setFilter("fillHover", ["==", "VOLUME", ""]);
+        }
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 });
+
+map.on("mouseout", function() {
+        map.setFilter("cutHover", ["==", "VOLUME", ""]);
+        map.setFilter("fillHover", ["==", "VOLUME", ""]);
+    });
 
 map.addControl(new mapboxgl.Navigation({position: 'top-left'}));
 

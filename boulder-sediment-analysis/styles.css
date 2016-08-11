@@ -17,6 +17,18 @@
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
 .demo-avatar, .demo-drawer-header.mdl-card {
   max-width: 100%;
 }
@@ -35,6 +47,7 @@ html, body {
 }
 .demo-drawer {
   border: none;
+  box-shadow: none;
 }
 /* iOS Safari specific workaround */
 .demo-drawer .mdl-menu__container {
@@ -181,7 +194,8 @@ _:-ms-input-placeholder, :root .demo-graph {
 }
 .demo-list-item {
   padding: 0 1em;
-  height: 2em;
+  min-height: 2.25em;
+  width: 100%;
 }
 .demo-legend-item {
   padding: 0 1em;
@@ -275,4 +289,32 @@ _:-ms-input-placeholder, :root .demo-graph {
 .mdl-color-text--scale6a {
   font-size: 21px  !important;
   padding:1.5px 0 0 1.5px;
+}
+.map-grid {
+  position: relative;
+  height: calc(100vh - 151px);
+  margin-top: 0;
+}
+.page-content {
+  padding:0;
+}
+.sliders {
+  margin-top: 0;
+  padding-top:0;
+}
+.full-width {
+  width: 100%;
+}
+.legend-icons {
+  padding-left: .5em;
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+#dialog {
+  max-height: calc(100vh - 64px);
+  top:1em;
+  overflow-y:auto;
+  min-width: 50%;
 }
