@@ -43,11 +43,11 @@ map.on('style.load', function () {
 
     map.addSource('fillPts', {
         type: 'vector',
-        url: 'mapbox://iconeng.f2e79498'
+        url: 'mapbox://iconeng.16fc0b56'
     });
     map.addSource('cutPts', {
       type: 'vector',
-      url: 'mapbox://iconeng.b7a321b8'
+      url: 'mapbox://iconeng.122e1c95'
     });
     map.addSource('sedimentPolys', {
       type: 'vector',
@@ -97,6 +97,7 @@ map.on('style.load', function () {
         'type': 'fill',
         'source': 'sedimentPolys',
         'source-layer': 'CutAreas',
+        'filter': [">=", "VOLUME", 500],
         'layout': {
             'visibility': 'visible'
         },
@@ -111,6 +112,7 @@ map.on('style.load', function () {
         'type': 'line',
         'source': 'sedimentPolys',
         'source-layer': 'CutAreas',
+        'filter': [">=", "VOLUME", 500],
         'layout': {
             'visibility': 'visible',
             'line-join': 'round',
@@ -132,6 +134,7 @@ map.on('style.load', function () {
         'type': 'fill',
         'source': 'sedimentPolys',
         'source-layer': 'FillAreas',
+        'filter': [">=", "VOLUME", 500],
         'layout': {
             'visibility': 'visible'
         },
@@ -146,6 +149,7 @@ map.on('style.load', function () {
         'type': 'line',
         'source': 'sedimentPolys',
         'source-layer': 'FillAreas',
+        'filter': [">=", "VOLUME", 500],
         'layout': {
             'visibility': 'visible',
             'line-join': 'round',
@@ -166,37 +170,37 @@ map.on('style.load', function () {
         'id': 'cutPts',
         'type': 'circle',
         'source': 'cutPts',
-        'source-layer': 'cutPts',
+        'source-layer': 'cutPoints',
         'interactive': true,
         'layout': {
             'visibility': 'visible'
         },
         'paint': {
             'circle-radius': {
-                property: 'Vol',
+                property: 'VOLUME',
                 base: 1.99,
                 type: 'interval',
                 stops: [
-                    [{zoom: 13, value: -2000}, 1],
-                    [{zoom: 13, value: -1500}, .5],
-                    [{zoom: 13, value: -1000}, .2],
-                    [{zoom: 13, value: -500}, .1],
-                    [{zoom: 13, value: -1}, .1],
-                    [{zoom: 15, value: -2000}, 2],
-                    [{zoom: 15, value: -1500}, 1.5],
-                    [{zoom: 15, value: -1000}, 1],
-                    [{zoom: 15, value: -500}, .5],
-                    [{zoom: 15, value: -1}, .25],
-                    [{zoom: 17, value: -2000}, 8],
-                    [{zoom: 17, value: -1500}, 6],
-                    [{zoom: 17, value: -1000}, 4],
-                    [{zoom: 17, value: -500}, 2],
-                    [{zoom: 17, value: -1}, 1],
-                    [{zoom: 19, value: -2000}, 32],
-                    [{zoom: 19, value: -1500}, 24],
-                    [{zoom: 19, value: -1000}, 16],
-                    [{zoom: 19, value: -500}, 8],
-                    [{zoom: 19, value: -1}, 4]
+                    [{zoom: 13, value: 0}, .1],
+                    [{zoom: 13, value: 10}, .1],
+                    [{zoom: 13, value: 25}, .2],
+                    [{zoom: 13, value: 50}, .5],
+                    [{zoom: 13, value: 2000}, 1],
+                    [{zoom: 15, value: 0}, .25],
+                    [{zoom: 15, value: 10}, .5],
+                    [{zoom: 15, value: 25}, 1],
+                    [{zoom: 15, value: 50}, 1.5],
+                    [{zoom: 15, value: 2000}, 2],
+                    [{zoom: 17, value: 0}, 1],
+                    [{zoom: 17, value: 10}, 2],
+                    [{zoom: 17, value: 25}, 4],
+                    [{zoom: 17, value: 50}, 6],
+                    [{zoom: 17, value: 2000}, 8],
+                    [{zoom: 19, value: 0}, 4],
+                    [{zoom: 19, value: 10}, 8],
+                    [{zoom: 19, value: 25}, 16],
+                    [{zoom: 19, value: 50}, 24],
+                    [{zoom: 19, value: 2000}, 32]
                     ]
             },
             'circle-color': '#2c3e50'
@@ -207,36 +211,36 @@ map.on('style.load', function () {
         'id': 'fillPts',
         'type': 'circle',
         'source': 'fillPts',
-        'source-layer': 'fillPts',
+        'source-layer': 'fillPoints',
         'interactive': true,
         'layout': {
             'visibility': 'visible'
         },
         'paint': {
             'circle-radius': {
-                property: 'Vol',
+                property: 'VOLUME',
                 base: 1.99,
                 type: 'interval',
                 stops: [
-                    [{zoom: 13, value: 1}, .1],
-                    [{zoom: 13, value: 500}, .1],
-                    [{zoom: 13, value: 1000}, .2],
-                    [{zoom: 13, value: 1500}, .5],
+                    [{zoom: 13, value: 0}, .1],
+                    [{zoom: 13, value: 10}, .1],
+                    [{zoom: 13, value: 25}, .2],
+                    [{zoom: 13, value: 50}, .5],
                     [{zoom: 13, value: 2000}, 1],
-                    [{zoom: 15, value: 1}, .25],
-                    [{zoom: 15, value: 500}, .5],
-                    [{zoom: 15, value: 1000}, 1],
-                    [{zoom: 15, value: 1500}, 1.5],
+                    [{zoom: 15, value: 0}, .25],
+                    [{zoom: 15, value: 10}, .5],
+                    [{zoom: 15, value: 25}, 1],
+                    [{zoom: 15, value: 50}, 1.5],
                     [{zoom: 15, value: 2000}, 2],
-                    [{zoom: 17, value: 1}, 1],
-                    [{zoom: 17, value: 500}, 2],
-                    [{zoom: 17, value: 1000}, 4],
-                    [{zoom: 17, value: 1500}, 6],
+                    [{zoom: 17, value: 0}, 1],
+                    [{zoom: 17, value: 10}, 2],
+                    [{zoom: 17, value: 25}, 4],
+                    [{zoom: 17, value: 50}, 6],
                     [{zoom: 17, value: 2000}, 8],
-                    [{zoom: 19, value: 1}, 4],
-                    [{zoom: 19, value: 500}, 8],
-                    [{zoom: 19, value: 1000}, 16],
-                    [{zoom: 19, value: 1500}, 24],
+                    [{zoom: 19, value: 0}, 4],
+                    [{zoom: 19, value: 10}, 8],
+                    [{zoom: 19, value: 25}, 16],
+                    [{zoom: 19, value: 50}, 24],
                     [{zoom: 19, value: 2000}, 32]
                     ]
             },
@@ -254,7 +258,7 @@ map.on('style.load', function () {
         map.setFilter('fillLine', [">=", "VOLUME", parseInt(e.target.value, 10)]);
 
         // Value indicator
-        fillSliderValue.innerHTML = e.target.value + ' ft<sup>3</sup>';
+        fillSliderValue.innerHTML = e.target.value + ' yd<sup>3</sup>';
     });
 
     cutSlider.addEventListener('input', function(e) {
@@ -266,7 +270,7 @@ map.on('style.load', function () {
         map.setFilter('cutLine', [">=", "VOLUME", parseInt(e.target.value, 10)]);
 
         // Value indicator
-        cutSliderValue.innerHTML = e.target.value + ' ft<sup>3</sup>';
+        cutSliderValue.innerHTML = e.target.value + ' yd<sup>3</sup>';
     });
 
 }); //end style load
@@ -283,7 +287,7 @@ map.on('click', function (e) {
 
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
-            .setHTML('<span>Volume: ' + feature.properties.Vol + ' ft<sup>3</sup></span><br />')
+            .setHTML('<span>Volume: ' + feature.properties.VOLUME + ' yd<sup>3</sup></span><br />')
             .addTo(map);
     });
 
