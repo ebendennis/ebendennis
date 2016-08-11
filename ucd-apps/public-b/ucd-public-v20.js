@@ -8,7 +8,7 @@ var bounds = [
 
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'mapbox://styles/iconeng/cirps0a5j002ig9ng79pj2g52',
     zoom: 11,
     center: [-105.2483, 40.0183],
     hash: true,
@@ -59,8 +59,27 @@ map.on('load', function() {
         "source-layer": "Flood2013Extents",
         "type": "fill",
         "paint": {
-            'fill-color': '#0F2A45',
-            'fill-opacity': 0.4
+            'fill-pattern': 'bluegreystripe',
+            'fill-opacity': 0.75
+        }
+    }, 'road-label-small');
+
+    map.addLayer({
+        "id": "floodExtentsLine",
+        "source": "flooding",
+        "source-layer": "Flood2013Extents",
+        "type": "line",
+       'layout': {
+            'visibility': 'visible',
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        'paint': {
+          'line-width': {
+              "stops": [[13, 1], [15, 2],[17, 4]]
+          },
+          'line-opacity': 0.75,
+            'line-color': '#829191'
         }
     }, 'road-label-small');
 
