@@ -27,7 +27,7 @@ for (var i = 0; i < inputs.length; i++) {
 
 function printCanvas() {
     var w = window.open('', '');
-    w.document.title = "Printed - Manitou Springs Flood Data";
+    w.document.title = "Printed - Boulder Sediment Transport Analysis";
     var img = new Image();
     img.src = map.getCanvas().toDataURL('image/png', 1.0);
     img.style.maxWidth = "100%";
