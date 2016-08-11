@@ -341,7 +341,7 @@ map.on('style.load', function () {
           'text-field': '{Name}',
           'text-font': ['Roboto Light Italic','Open Sans Light Italic','Arial Unicode MS Regular'],
           'text-size': {
-            "stops": [[13,8],[17,10],[19,12]]
+            "stops": [[13,9],[15,12],[17,14]]
           }
         },
         'paint': {

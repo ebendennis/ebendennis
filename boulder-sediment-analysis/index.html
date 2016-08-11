@@ -37,10 +37,10 @@
             mdl-layout--fixed-header">
   <header class="demo-header mdl-layout__header mdl-layout__header--transparent mdl-color--blue-grey-700 mdl-color-text--grey-50">
     <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">Boulder Sediment Transport Analysis</span>
+    <span class="mdl-layout-title">Boulder Sediment Transport Analysis
     <button id="info-dialog" class="mdl-button mdl-js-button mdl-button--icon">
       <i class="material-icons" style="font-size:.6em;">info_outline</i>
-    </button>
+    </button></span>
     <!--  <div class="mdl-layout-spacer"></div>
         <button class="mdl-button mdl-js-button mdl-button--icon mdl-color-text--grey-400 mdl-cell--hide-tablet" id="hdrbtn">
           <i class="material-icons">more_vert</i>
@@ -81,7 +81,7 @@
     <div id="layers-panel" class="full-width">
       <ul class="demo-list-control mdl-list">
         <li class="mdl-list__item layer-heading">
-            <span class="mdl-list__item-secondary-content">
+            <span class="mdl-list__item-secondary-content" style="margin-left: .25em;">
               <span class="mdl-list__item-secondary-info mdl-color-text--grey-400">
                 Off/On
               </span>
@@ -94,7 +94,7 @@
               </label>
             </span>
             <span class="mdl-list__item-secondary-content">
-              Fill 
+              Deposition 
             </span>
             <i class="material-icons legend-icons" style="color: #DD2C00;">bubble_chart</i>
           </li>
@@ -105,7 +105,7 @@
               </label>
             </span>
             <span class="mdl-list__item-secondary-content">
-              Cut 
+              Erosion 
             </span>
             <i class="material-icons legend-icons" style="color: #2962FF;">bubble_chart</i>
           </li>
@@ -126,8 +126,8 @@
                 <input type="checkbox" id="city" class="mdl-switch__input layer-on" onclick="toggleLayer('city')" checked/>
               </label>
             </span>
-            <span class="mdl-list__item-secondary-content">
-              City 
+            <span class="mdl-list__item-secondary-content" style="text-align:right;">
+              City Bounds
             </span>
             <i class="material-icons legend-icons" style="color: #333333;">crop_16_9</i>
           </li>
@@ -137,8 +137,8 @@
                 <input type="checkbox" id="aoi" class="mdl-switch__input layer-off" onclick="toggleTwo('aoi-line','aoi-fill')"/>
               </label>
             </span>
-            <span class="mdl-list__item-secondary-content">
-              AOI 
+            <span id="aoi-tip" class="mdl-list__item-secondary-content" style="text-align:right;">
+              Area of Interest 
             </span>
             <i class="material-icons legend-icons" style="color: #829191;">crop_16_9</i>
           </li>
@@ -157,12 +157,12 @@
       <div class='mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid sliders'>
         <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-color-text--grey-600">
           <!-- Slider with Starting Value -->
-          <div>Highlight Areas of <span class='mdl-color-text--deep-orange'><b>Deposition</b></span> Larger Than: <span id='fillSlider-value'>500 yd<sup>3</sup></span></div>
+          <div>Highlight Areas of <span class='mdl-color-text--deep-orange'><b>Deposition</b></span> Larger Than: <b><span id='fillSlider-value' class='mdl-color-text--grey-800'>500 yd<sup>3</sup></span></b></div>
           <input id='fillSlider' class="mdl-slider mdl-js-slider" type="range" min="0" max="20000" value="500" step="500" tabindex="0">
         </div>
         <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-color-text--grey-600">
           <!-- Slider with Starting Value -->
-          <div>Highlight Areas of <span class='mdl-color-text--blue'><b>Erosion</b></span> Larger Than: <span id='cutSlider-value'>500 yd<sup>3</sup></span></div>
+          <div>Highlight Areas of <span class='mdl-color-text--blue'><b>Erosion</b></span> Larger Than: <b><span id='cutSlider-value' class='mdl-color-text--grey-800'>500 yd<sup>3</sup></span></b></div>
           <input id='cutSlider' class="mdl-slider mdl-js-slider" type="range" min="0" max="20000" value="500" step="500" tabindex="0">
         </div>
       </div>

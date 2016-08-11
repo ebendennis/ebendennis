@@ -25,10 +25,10 @@ html {
   width: 0px;  /* remove scrollbar space */
   background: transparent;  /* optional: just make scrollbar invisible */
 }
-/* optional: show position indicator in red */
+/* optional: show position indicator in red 
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
-}
+} */
 .demo-avatar, .demo-drawer-header.mdl-card {
   max-width: 100%;
 }
@@ -193,7 +193,7 @@ _:-ms-input-placeholder, :root .demo-graph {
   align-items: center;
 }
 .demo-list-item {
-  padding: 0 1em;
+  padding: 0 .25em;
   min-height: 2.25em;
   width: 100%;
 }
