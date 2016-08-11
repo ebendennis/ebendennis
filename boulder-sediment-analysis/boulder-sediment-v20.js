@@ -181,7 +181,7 @@ map.on('style.load', function () {
         'id': 'cutHover',
         'type': 'line',
         'source': 'cutPolys',
-        'filter': [">=", "VOLUME", 500],
+        'filter': ["==", "VOLUME", ""],
         'layout': {
             'visibility': 'visible',
             'line-join': 'round',
@@ -236,7 +236,7 @@ map.on('style.load', function () {
         'id': 'fillHover',
         'type': 'line',
         'source': 'fillPolys',
-        'filter': [">=", "VOLUME", 500],
+        'filter': ["==", "VOLUME", ""],
         'layout': {
             'visibility': 'visible',
             'line-join': 'round',
