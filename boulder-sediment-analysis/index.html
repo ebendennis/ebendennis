@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.css">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.amber-lime.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.amber-blue.min.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.js'></script>
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -35,9 +35,9 @@
   even in small screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
             mdl-layout--fixed-header">
-  <header class="demo-header mdl-layout__header mdl-layout__header--transparent mdl-color--blue-grey-700 mdl-color-text--grey-50">
+  <header class="demo-header mdl-layout__header mdl-layout__header--transparent mdl-color--grey-700 mdl-color-text--grey-50">
     <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">Boulder Sediment Transport Analysis
+    <span class="mdl-layout-title">Boulder Sediment Assessment
     <button id="info-dialog" class="mdl-button mdl-js-button mdl-button--icon">
       <i class="material-icons" style="font-size:.6em;">info_outline</i>
     </button></span>
@@ -52,7 +52,7 @@
         </ul> -->
     </div>
   </header>
-  <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-700 mdl-color-text--grey-50 mdl-shadow--0dp">
+  <div class="demo-drawer mdl-layout__drawer mdl-color--grey-700 mdl-color-text--grey-50 mdl-shadow--0dp">
     <header class="demo-drawer-header">
           <img src="header_logo.png" class="demo-avatar" style="padding:.8em;max-height:50px;">
           <img src="http://iconengineering.github.io/images/icon-logo-horizontal.png" class="demo-avatar">
@@ -79,7 +79,7 @@
     <span class="full-width demo-section-title mdl-color-text--grey-600">Layers</span>
 
     <div id="layers-panel" class="full-width">
-      <ul class="demo-list-control mdl-list">
+      <ul class="demo-list-control mdl-list" style="margin-top:0;">
         <li class="mdl-list__item layer-heading">
             <span class="mdl-list__item-secondary-content" style="margin-left: .25em;">
               <span class="mdl-list__item-secondary-info mdl-color-text--grey-400">
@@ -152,7 +152,7 @@
       </div>
     </div> <!-- Drawer Grid -->
   </div>
-  <main class="mdl-layout__content mdl-color--blue-grey-700">
+  <main class="mdl-layout__content mdl-color--grey-700">
     <div class="mdl-grid page-content">
       <div class='mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid sliders'>
         <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-color-text--grey-600">
@@ -178,23 +178,22 @@
     <button class="mdl-button mdl-js-button mdl-button--icon close top-right">
       <i class="material-icons">close</i>
     </button>
-    <h4 class="mdl-dialog__title">About This Project</h4>
+    <h4 class="mdl-dialog__title">Boulder Sediment Assessment</h4>
     <div class="mdl-dialog__content">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae orci vel enim fermentum feugiat eu a felis. In dignissim est in nisl viverra, id efficitur metus elementum. Praesent eu massa commodo, vestibulum libero non, molestie arcu. Donec finibus molestie rhoncus. Aliquam erat volutpat. Mauris laoreet neque eget congue consequat. Vestibulum lobortis neque sit amet eros tristique, vehicula condimentum turpis mattis. Suspendisse tincidunt, massa sit amet ultrices blandit, lorem augue lacinia velit, vitae porttitor diam libero et augue. Sed eu enim odio. Maecenas a dolor ornare, aliquam ante ut, iaculis urna. Quisque sodales velit ipsum, et convallis eros tristique eu. Morbi tincidunt a est nec euismod. Integer dui enim, rhoncus ut ante eu, gravida tempus erat. Integer feugiat lacinia justo, ut fringilla justo finibus ut.
-        </p>
-        <p>
-        Nunc hendrerit commodo tellus, sit amet placerat lorem maximus id. Integer ac lorem in ante imperdiet tincidunt nec ut odio. Nam hendrerit ullamcorper turpis vel hendrerit. Vivamus blandit consectetur nulla sed pretium. Mauris quam lacus, dignissim sed erat id, elementum commodo eros. Aliquam id consectetur turpis, vel euismod felis. Aliquam mattis diam nisl, cursus convallis ligula posuere ac. Donec faucibus turpis at nisl sollicitudin bibendum. Nullam tempor dignissim nisl, in ultricies enim iaculis at.
-        </p>
-        <p>
-        Mauris at venenatis augue. Nullam vel pellentesque nunc. Morbi sodales commodo ultricies. Curabitur euismod volutpat tristique. Maecenas eget eros suscipit, efficitur elit nec, viverra turpis. Proin in eleifend erat. Integer convallis ultrices sapien, sit amet eleifend nibh tempor fringilla. In sed pellentesque ligula.
-        </p>
-        <p>
-        Vestibulum fermentum aliquam mauris, et congue eros blandit eget. Etiam tortor ligula, pretium a consequat sit amet, suscipit sit amet mauris. Integer ut porttitor sapien, nec efficitur velit. Aliquam euismod sollicitudin lorem, ac elementum nulla efficitur vitae. Fusce risus turpis, commodo aliquam ligula ac, elementum gravida lorem. Duis consequat nisl et ipsum varius aliquam. Duis consectetur neque at sem ultrices luctus. Vivamus tristique urna est, a auctor mauris placerat vel. Vivamus at sem eros. Nunc at tempor nisi. Donec dictum lectus quis dignissim fringilla.
-        </p>
-        <p>
-        Mauris sed risus vel velit elementum volutpat vitae nec purus. Integer congue sollicitudin elit non bibendum. In vestibulum, purus in porta sodales, elit ante luctus arcu, et eleifend justo felis non ipsum. Curabitur eu sapien ut sapien malesuada sagittis. Morbi faucibus et sem et tincidunt. Suspendisse pellentesque, massa eget scelerisque vestibulum, ante mauris viverra urna, non ornare lorem neque vulputate felis. Nulla finibus pellentesque dui in lacinia.
-      </p>
+      <p><strong>Performed by Eben Dennis - GIS Coordinator, ICON Engineering, Inc. for the City of Boulder and Urban Drainage Flood Control District</strong></p>
+      <h5><a id="Background__Initial_Setup_4"></a>Background &amp; Initial Setup</h5>
+      <p>The focus of this study is a comparison between the City of Boulder’s pre-flood 2013 LiDAR dataset and the FEMA-collected post-flood 2013 LiDAR dataset. In compliance with best practices for raster processing, the FEMA data was resampled to match the Boulder raster’s resolution and location. A raster calculation of  <code>FEMA - Boulder</code>  was performed in order to provide a difference raster. Two separate rasters were then created, one for values +0.5 ft (fill), one for -0.5 ft (cut), and clipped to the study area. The elimination of lower values is done to mitigate some of the margin of error noise between the two datasets. The cut and fill difference rasters were each multiplied by 4 (resolution of all processed rasters is 2’x2’) to generate volume rasters.</p>
+      <p>The area of interest for this study was defined as a 50-ft buffer around the City’s 2013 Flood Extents layer, combined with a 100-ft buffer of all Hydrology Line features (with the exception of <code>&quot;DXF_LAYER&quot; == 'LATERAL'</code> ) located outside of the 2013 Flood Extents.</p>
+      <h5><a id="Processing_10"></a>Processing</h5>
+      <p>At the outset of this analysis, ICON determined that the best way to communicate areas of local erosion and deposition would be to aggregate the raster data and perform a cluster analysis. A grid of 20 ft hexagons that intersects the study area was created, and then zonal statistics for both volume rasters were calculated, with <code>SUM</code> being the statistical derivation used for the analysis. The zonal statistics table was joined to the hexagonal grid, and a new grid was created for both cut and fill. Polygons selected by the query  <code>&quot;RANGE&quot; = 0 AND &quot;COUNT&quot; &gt; 1</code> were deleted from this layer, as this would flag any uniform change in rasters from breaklining around ponds or buildings.</p>
+      <p>Next, a <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-statistics/h-how-cluster-and-outlier-analysis-anselin-local-m.htm">cluster and outlier analysis</a> was performed on each dataset in order to identify statistically significant clusters of high value polygons. Polygons from the cluster analysis results where  <code>&quot;COType&quot; == 'HH'</code> comprised a new shapefile, and these polygons were dissolved to generate the highlight areas for this analysis.</p>
+      <p>Zonal statistics were then calculated again from the volume rasters, this time with the dissolved high volume areas, and again <code>SUM</code>  was used to generate our final volume for the statistically significant areas of erosion and deposition.</p>
+      <h5><a id="Map_Layers_19"></a>Map Layers</h5>
+      <p><strong>Areas of Erosion/Deposition</strong> - Detailed above.<br>
+      <strong>Points of Erosion/Deposition</strong> - Centroids of the hexagonal grid/zonal statistics join. Size based on volume.<br>
+      <strong>Streams</strong> - From the UDFCD stream dataset.<br>
+      <strong>City Bounds</strong> - City of Boulder municipal boundaries.<br>
+<strong>Area of Interest</strong> - Buffered 2013 Flood Extents and selected Hydrology Lines.</p>
     </div>
     <div class="mdl-dialog__actions">
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored close2">

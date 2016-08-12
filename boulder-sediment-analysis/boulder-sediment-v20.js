@@ -27,7 +27,7 @@ for (var i = 0; i < inputs.length; i++) {
 
 function printCanvas() {
     var w = window.open('', '');
-    w.document.title = "Printed - Boulder Sediment Transport Analysis";
+    w.document.title = "Printed - Boulder Sediment Assessment";
     var img = new Image();
     img.src = map.getCanvas().toDataURL('image/png', 1.0);
     img.style.maxWidth = "100%";
@@ -51,11 +51,11 @@ map.on('style.load', function () {
     });
     map.addSource('fillPolys', {
       type: 'geojson',
-      data: 'FillAreas.geojson'
+      data: 'fillAreaAll.geojson'
     });
     map.addSource('cutPolys', {
       type: 'geojson',
-      data: 'CutAreas.geojson'
+      data: 'cutAreaAll.geojson'
     });
     map.addSource('aoi', {
       type: 'geojson',

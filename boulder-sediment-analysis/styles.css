@@ -29,6 +29,12 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
 } */
+code {
+  color: rgba(255,193,7,1);
+  background-color: rgba(255,248,225 ,1);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
 .demo-avatar, .demo-drawer-header.mdl-card {
   max-width: 100%;
 }
