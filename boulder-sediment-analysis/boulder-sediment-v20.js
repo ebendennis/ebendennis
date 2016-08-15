@@ -43,11 +43,11 @@ map.on('style.load', function () {
 
     map.addSource('fillPts', {
         type: 'vector',
-        url: 'mapbox://iconeng.16fc0b56'
+        url: 'mapbox://iconeng.b643a573'
     });
     map.addSource('cutPts', {
       type: 'vector',
-      url: 'mapbox://iconeng.122e1c95'
+      url: 'mapbox://iconeng.f468d6e0'
     });
     map.addSource('fillPolys', {
       type: 'geojson',
@@ -68,6 +68,10 @@ map.on('style.load', function () {
     map.addSource('hydrology', {
       type: 'geojson',
       data: 'stream.geojson'
+    });
+    map.addSource('streamPolys', {
+      type: 'geojson',
+      data: 'streamAssignments.geojson'
     });
 
     map.addLayer({
@@ -138,6 +142,39 @@ map.on('style.load', function () {
               "stops": [[13, .75], [15, .5],[17, .25]]
           },
             'line-color': '#829191'
+        }
+    },'road-label-small');
+
+    map.addLayer({
+        'id': 'streamAssignments',
+        'type': 'fill',
+        'source': 'streamPolys',
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+            'fill-color': {
+                property: 'Id',
+                type: 'categorical',
+                stops: [
+                    [1, '#beaed4'],
+                    [2, '#ffff99'],
+                    [3, '#fdc086'],
+                    [4, '#bf5b17'],
+                    [5, '#7fc97f'],
+                    [6, '#fdc086'],
+                    [7, '#ffff99'],
+                    [8, '#fdc086'],
+                    [9, '#bf5b17'],
+                    [10, '#7fc97f'],
+                    [11, '#beaed4'],
+                    [12, '#ffff99'],
+                    [13, '#fdc086'],
+                    [14, '#bf5b17'],
+                    [15, '#7fc97f']
+                    ]
+                },
+            'fill-opacity': 0.6
         }
     },'road-label-small');
 
@@ -255,7 +292,7 @@ map.on('style.load', function () {
         'id': 'cutPts',
         'type': 'circle',
         'source': 'cutPts',
-        'source-layer': 'cutPoints',
+        'source-layer': 'cutPointsFix',
         'layout': {
             'visibility': 'visible'
         },
@@ -295,7 +332,7 @@ map.on('style.load', function () {
         'id': 'fillPts',
         'type': 'circle',
         'source': 'fillPts',
-        'source-layer': 'fillPoints',
+        'source-layer': 'fillPointsFix',
         'layout': {
             'visibility': 'visible'
         },
@@ -381,23 +418,32 @@ map.on('style.load', function () {
 // When a click event occurs near a marker icon, open a popup at the location of
 // the feature, with description HTML from its properties.
 map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['fillFill','cutFill'] });
+  var features = map.queryRenderedFeatures(e.point, { layers: ['fillFill','cutFill','streamAssignments'] });
   if (!features.length) {
       return;
   }
 
   var feature = features[0];
-
+    console.log(feature);
+    if (feature.layer.id == 'streamAssignments'){
+        var popup = new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML('<b>' + feature.properties.CREEK + '</b><br />' +
+                '<span>Deposit Volume: ' + feature.properties.FILL + ' yd<sup>3</sup></span><br />' +
+                '<span>Erosion Volume: ' + feature.properties.CUT + ' yd<sup>3</sup></span>')
+            .addTo(map);
+    } else {
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<span>Volume: ' + feature.properties.VOLUME + ' yd<sup>3</sup></span><br />')
             .addTo(map);
+    }
     });
 
 // Use the same approach as above to indicate that the symbols are clickable
 // by changing the cursor style to 'pointer'.
 map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['fillFill','cutFill'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['fillFill','cutFill','streamAssignments'] });
     if (features.length) {
             map.setFilter("cutHover", ["==", "VOLUME", features[0].properties.VOLUME]);
             map.setFilter("fillHover", ["==", "VOLUME", features[0].properties.VOLUME]);

@@ -137,10 +137,23 @@
                 <input type="checkbox" id="aoi" class="mdl-switch__input layer-off" onclick="toggleTwo('aoi-line','aoi-fill')"/>
               </label>
             </span>
-            <span id="aoi-tip" class="mdl-list__item-secondary-content" style="text-align:right;">
+            <span class="mdl-list__item-secondary-content" style="text-align:right;">
               Area of Interest 
             </span>
             <i class="material-icons legend-icons" style="color: #829191;">crop_16_9</i>
+          </li>
+          <li class="demo-list-item mdl-list__item mdl-color-text--grey-600">
+            <span class="mdl-list__item-primary-action">
+              <label class="mdl-switch mdl-js-switch label-off" for="drainageways">
+                <input type="checkbox" id="drainageways" class="mdl-switch__input layer-off" onclick="toggleLayer('streamAssignments')"/>
+              </label>
+            </span>
+            <span class="mdl-list__item-secondary-content" style="text-align:right;">
+              Drainageways
+            </span>
+            <button id="drainage-dialog" class="mdl-button mdl-js-button mdl-button--icon">
+              <i class="material-icons" style="font-size:.6em;">info_outline</i>
+            </button>
           </li>
         </ul>
       </div>
@@ -193,7 +206,109 @@
       <strong>Points of Erosion/Deposition</strong> - Centroids of the hexagonal grid/zonal statistics join. Size based on volume.<br>
       <strong>Streams</strong> - From the UDFCD stream dataset.<br>
       <strong>City Bounds</strong> - City of Boulder municipal boundaries.<br>
-<strong>Area of Interest</strong> - Buffered 2013 Flood Extents and selected Hydrology Lines.</p>
+      <strong>Area of Interest</strong> - Buffered 2013 Flood Extents and selected Hydrology Lines.</p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored close2">
+          Close
+        </button>
+    </div>
+  </dialog>
+
+  <dialog id="dialog2" class="mdl-dialog">
+    <div class="mdl-layout-spacer"></div>
+    <button class="mdl-button mdl-js-button mdl-button--icon close top-right">
+      <i class="material-icons">close</i>
+    </button>
+    <h6 class="mdl-dialog__title">Sediment Volume by Drainageway</h6>
+    <div class="mdl-dialog__content">
+      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp centered">
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Drainageway</th>
+          <th>Cut (ft<sup>3</sup>)</th>
+          <th>Fill (ft<sup>3</sup>)</th>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Bear Canyon Creek</td>
+          <td>15,498</td>
+          <td>14,318</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Bluebell Canyon Creek</td>
+          <td>5,218</td>
+          <td>11,793</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Boulder Creek</td>
+          <td>217,779</td>
+          <td>175,240</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Boulder Slough</td>
+          <td>7,159</td>
+          <td>1,797</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Elmers Twomile Creek</td>
+          <td>1,816</td>
+          <td>2,342</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Fourmile Canyon Creek</td>
+          <td>46,055</td>
+          <td>122,353</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Goose Creek</td>
+          <td>8,754</td>
+          <td>10,034</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Gregory Canyon Creek</td>
+          <td>9,653</td>
+          <td>13,568</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Kings Gulch</td>
+          <td>1,860</td>
+          <td>1,352</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Skunk Creek</td>
+          <td>13,197</td>
+          <td>18,994</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">South Boulder Creek</td>
+          <td>130,458</td>
+          <td>83,324</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Sunshine Canyon Creek</td>
+          <td>3,570</td>
+          <td>13,209</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Twomile Canyon Creek</td>
+          <td>12,825</td>
+          <td>42,843</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Viele Channel</td>
+          <td>1,198</td>
+          <td>1,387</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Wonderland Creek</td>
+          <td>10,421</td>
+          <td>14,042</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><b>Total</b></td>
+          <td><b>485,461</b></td>
+          <td><b>526,596</b></td>
+        </tr>
+      </table>
     </div>
     <div class="mdl-dialog__actions">
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored close2">
@@ -216,6 +331,22 @@
     });
     dialog.querySelector('.close2').addEventListener('click', function() {
       dialog.close();
+    });
+
+
+    var dialog2 = document.querySelector('#dialog2');
+    var showDialogButton2 = document.querySelector('#drainage-dialog');
+    if (! dialog2.showModal) {
+      dialogPolyfill.registerDialog(dialog2);
+    }
+    showDialogButton2.addEventListener('click', function() {
+      dialog2.showModal();
+    });
+    dialog2.querySelector('.close').addEventListener('click', function() {
+      dialog2.close();
+    });
+    dialog2.querySelector('.close2').addEventListener('click', function() {
+      dialog2.close();
     });
   </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

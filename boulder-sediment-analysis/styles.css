@@ -318,7 +318,7 @@ _:-ms-input-placeholder, :root .demo-graph {
   margin-left: auto;
   margin-right: auto;
 }
-#dialog {
+#dialog, #dialog2 {
   max-height: calc(100vh - 64px);
   top:1em;
   overflow-y:auto;
