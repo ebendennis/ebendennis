@@ -202,11 +202,12 @@
       <p>Next, a <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-statistics/h-how-cluster-and-outlier-analysis-anselin-local-m.htm">cluster and outlier analysis</a> was performed on each dataset in order to identify statistically significant clusters of high value polygons. Polygons from the cluster analysis results where  <code>&quot;COType&quot; == 'HH'</code> comprised a new shapefile, and these polygons were dissolved to generate the highlight areas for this analysis.</p>
       <p>Zonal statistics were then calculated again from the volume rasters, this time with the dissolved high volume areas, and again <code>SUM</code>  was used to generate our final volume for the statistically significant areas of erosion and deposition.</p>
       <h5><a id="Map_Layers_19"></a>Map Layers</h5>
-      <p><strong>Areas of Erosion/Deposition</strong> - Detailed above.<br>
+      <p><strong>Areas of Erosion/Deposition</strong> - Detailed above. Volume available on click.<br>
       <strong>Points of Erosion/Deposition</strong> - Centroids of the hexagonal grid/zonal statistics join. Size based on volume.<br>
       <strong>Streams</strong> - From the UDFCD stream dataset.<br>
       <strong>City Bounds</strong> - City of Boulder municipal boundaries.<br>
-      <strong>Area of Interest</strong> - Buffered 2013 Flood Extents and selected Hydrology Lines.</p>
+      <strong>Area of Interest</strong> - Buffered 2013 Flood Extents and selected Hydrology Lines.<br>
+      <strong>Drainageways</strong> - Buffered 2013 Flood Extents with detailed information available on click.</p>
     </div>
     <div class="mdl-dialog__actions">
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored close2">
@@ -304,9 +305,19 @@
           <td>14,042</td>
         </tr>
         <tr>
-          <td class="mdl-data-table__cell--non-numeric"><b>Total</b></td>
+          <td class="mdl-data-table__cell--non-numeric"><b>Total in Drainageways</b></td>
           <td><b>485,461</b></td>
           <td><b>526,596</b></td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Rest of AOI</td>
+          <td>257,105</td>
+          <td>403,888</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><b>Total</b></td>
+          <td><b>742,566</b></td>
+          <td><b>930,483</b></td>
         </tr>
       </table>
     </div>
