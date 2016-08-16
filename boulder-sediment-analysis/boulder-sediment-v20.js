@@ -443,7 +443,7 @@ map.on('click', function (e) {
 // Use the same approach as above to indicate that the symbols are clickable
 // by changing the cursor style to 'pointer'.
 map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['fillFill','cutFill','streamAssignments'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['fillFill','cutFill'] });
     if (features.length) {
             map.setFilter("cutHover", ["==", "VOLUME", features[0].properties.VOLUME]);
             map.setFilter("fillHover", ["==", "VOLUME", features[0].properties.VOLUME]);

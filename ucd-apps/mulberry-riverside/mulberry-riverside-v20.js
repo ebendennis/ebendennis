@@ -76,72 +76,6 @@ function filterBy(type, facet, name) {
     });
 }
 
-function renderDepth() {
-
-    layers.forEach(function(layer, i) {
-    map.addLayer({
-        'id': 'flowDepth' + i,
-        'interactive': true,
-        'type': 'fill',
-        'source': 'flo2d',
-        'source-layer': 'Ex_Max_Flow_Depth',
-        'layout': {
-            'visibility': 'visible'
-        },
-        'paint': {
-            'fill-color': layer[2],
-            'fill-opacity': 0.8
-        }
-    },'road_label');
-  });
-
-  filterBy(one, variable, depth)
-}
-
-function renderDepth1() {
-
-    layers.forEach(function(layer, i) {
-    map.addLayer({
-        'id': 'flowDepth1' + i,
-        'interactive': true,
-        'type': 'fill',
-        'source': 'flo2d-alt1',
-        'source-layer': 'Alt01_Max_Flow_Depth',
-        'layout': {
-            'visibility': 'none'
-        },
-        'paint': {
-            'fill-color': layer[2],
-            'fill-opacity': 0.8
-        }
-    },'road_label');
-  });
-
-  filterBy(one, variable, depth1)
-}
-
-function renderDepth2() {
-
-    layers.forEach(function(layer, i) {
-    map.addLayer({
-        'id': 'flowDepth2' + i,
-        'interactive': true,
-        'type': 'fill',
-        'source': 'flo2d-alt2',
-        'source-layer': 'Alt02_Max_Flow_Depth',
-        'layout': {
-            'visibility': 'none'
-        },
-        'paint': {
-            'fill-color': layer[2],
-            'fill-opacity': 0.8
-        }
-    },'road_label');
-  });
-
-  filterBy(one, variable, depth2)
-}
-
 function renderVelocity() {
 
     layers.forEach(function(layer, i) {
@@ -221,12 +155,96 @@ map.on('style.load', function () {
         url: 'mapbox://iconeng.00e789e0'
     });
 
-    renderDepth()
+//    renderDepth()
     renderVelocity()
-    renderDepth1()
+//    renderDepth1()
     renderVelocity1()
-    renderDepth2()
+//    renderDepth2()
     renderVelocity2()
+
+    map.addLayer({
+        'id': 'flowDepth',
+        'interactive': true,
+        'type': 'fill',
+        'source': 'flo2d',
+        'source-layer': 'Ex_Max_Flow_Depth',
+        'filter': ['>=','Var',.25],
+        'layout': {
+            'visibility': 'visible'
+        },
+        'paint': {
+            'fill-color': {
+                property: 'Var',
+                type: 'interval',
+                stops: [
+                    ['.25', '#f6edb2'],
+                    ['.5', '#f9cc9d'],
+                    ['1', '#f6ad93'],
+                    ['1.5', '#ee8d92'],
+                    ['2', '#ce779e'],
+                    ['3', '#a369a7'],
+                    ['4', '#685fae']
+                    ]
+            },
+            'fill-opacity': 0.8
+        }
+    },'road_label');
+
+    map.addLayer({
+        'id': 'flowDepth1',
+        'interactive': true,
+        'type': 'fill',
+        'source': 'flo2d-alt1',
+        'source-layer': 'Alt01_Max_Flow_Depth',
+        'filter': ['>=','Var',.25],
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+            'fill-color': {
+                property: 'Var',
+                type: 'interval',
+                stops: [
+                    ['.25', '#f6edb2'],
+                    ['.5', '#f9cc9d'],
+                    ['1', '#f6ad93'],
+                    ['1.5', '#ee8d92'],
+                    ['2', '#ce779e'],
+                    ['3', '#a369a7'],
+                    ['4', '#685fae']
+                    ]
+            },
+            'fill-opacity': 0.8
+        }
+    },'road_label');
+
+    map.addLayer({
+        'id': 'flowDepth2',
+        'interactive': true,
+        'type': 'fill',
+        'source': 'flo2d-alt2',
+        'source-layer': 'Alt02_Max_Flow_Depth',
+        'filter': ['>=','Var',.25],
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+            'fill-color': {
+                property: 'Var',
+                type: 'interval',
+                stops: [
+                    ['.25', '#f6edb2'],
+                    ['.5', '#f9cc9d'],
+                    ['1', '#f6ad93'],
+                    ['1.5', '#ee8d92'],
+                    ['2', '#ce779e'],
+                    ['3', '#a369a7'],
+                    ['4', '#685fae']
+                    ]
+            },
+            'fill-opacity': 0.8
+        }
+    },'road_label');
 
 // IMPORT FROM PREVIOUS MAP
 
@@ -589,13 +607,13 @@ map.on('style.load', function () {
 // When a click event occurs near a marker icon, open a popup at the location of
 // the feature, with description HTML from its properties.
 map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['xs'] });
+  var features = map.queryRenderedFeatures(e.point, { layers: ['xs','alt1','alt1Inlet','alt2','alt2Inlet','alt3','conduits','junctions','flowDepth','flowDepth1','flowDepth2'] });
   if (!features.length) {
       return;
   }
 
   var feature = features[0];
-
+    if (feature.layer.id == 'xs'){
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<span>' + feature.properties.Descr + '</span><br />' +
@@ -604,91 +622,37 @@ map.on('click', function (e) {
                     '<span>Alternative 2: ' + feature.properties.ALT02 + ' cfs</span><br />' +
                     '<span>Alternative 3: ' + feature.properties.ALT03 + ' cfs</span><br />' )
             .addTo(map);
-    });
-
-map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['alt1'] });
-  if (!features.length) {
-      return;
-  }
-
-  var feature = features[0];
-
+    } else if (feature.layer.id == 'alt1'){
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<span>' + feature.properties.Descr + '</span><br />' +
                     '<span>Alternative 1: ' + feature.properties.Alt01_T + ' cfs</span>')
-            .addTo(map);
-    });
-
-map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['alt1Inlet'] });
-  if (!features.length) {
-      return;
-  }
-
-  var feature = features[0];
-
+            .addTo(map);    
+    } else if (feature.layer.id == 'alt1Inlet'){
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<span>' + feature.properties.Length + ' ft</span><br />' +
                     '<span>' + feature.properties.Descr + '</span>')
             .addTo(map);
-    });
-
-map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['alt2'] });
-  if (!features.length) {
-      return;
-  }
-
-  var feature = features[0];
-
+    } else if (feature.layer.id == 'alt2'){
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<span>' + feature.properties.Descr + '</span><br />' +
                     '<span>Alternative 2: ' + feature.properties.Alt02_T + ' cfs</span>')
             .addTo(map);
-    });
-
-map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['alt3'] });
-  if (!features.length) {
-      return;
-  }
-
-  var feature = features[0];
-
-        var popup = new mapboxgl.Popup()
-            .setLngLat(e.lngLat)
-            .setHTML('<span>' + feature.properties.Descr + '</span><br />' +
-                    '<span>Alternative 3: ' + feature.properties.Alt03_T + ' cfs</span>')
-            .addTo(map);
-    });
-
-map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['alt2Inlet'] });
-  if (!features.length) {
-      return;
-  }
-
-  var feature = features[0];
-
+    } else if (feature.layer.id == 'alt2Inlet'){
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<span>' + feature.properties.Length + ' ft</span><br />' +
                     '<span>' + feature.properties.Descr + '</span>')
             .addTo(map);
-    });
-
-map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['conduits'] });
-  if (!features.length) {
-      return;
-  }
-
-  var feature = features[0];
-
+    } else if (feature.layer.id == 'alt3'){
+        var popup = new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML('<span>' + feature.properties.Descr + '</span><br />' +
+                    '<span>Alternative 3: ' + feature.properties.Alt03_T + ' cfs</span>')
+            .addTo(map);
+    } else if (feature.layer.id == 'conduits'){
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<span>Conduit: ' + feature.properties.Name + '</span><br />' +
@@ -697,16 +661,7 @@ map.on('click', function (e) {
                     '<span>Alternative 2: ' + feature.properties.Alt02_T + ' cfs</span><br />' +
                     '<span>Alternative 3: ' + feature.properties.Alt03_T + ' cfs</span>')
             .addTo(map);
-    });
-
-map.on('click', function (e) {
-  var features = map.queryRenderedFeatures(e.point, { layers: ['junctions'] });
-  if (!features.length) {
-      return;
-  }
-
-  var feature = features[0];
-
+    } else if (feature.layer.id == 'conduits'){
         var popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<span>Junction: ' + feature.properties.Name + '</span><br />' +
@@ -715,72 +670,30 @@ map.on('click', function (e) {
                     '<span>Alternative 2: ' + feature.properties.Alt02_T + ' cfs</span><br />' +
                     '<span>Alternative 3: ' + feature.properties.Alt03_T + ' cfs</span>')
             .addTo(map);
-    });
-
-map.on('click', function(e) {
-    var features = map.queryRenderedFeatures(e.point, {
-        // Collect each layer id we created into an array.
-        layers: layers.map(function(layer, i) {
-            return 'flowDepth' + i;
-        })
-    });
-
-    if (!features.length) {
-        return;
-    }
-    var feature = features[0];
-    // Initialize a popup and set its coordinates
-    // based on the feature found.
-    var popup = new mapboxgl.Popup()
+    } else if (feature.layer.id == 'flowDepth') {
+        var popup = new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML('<span>Existing:</span><br />' + feature.properties.Var + ' ft')
         .addTo(map);
-});
-
-map.on('click', function(e) {
-    var features = map.queryRenderedFeatures(e.point, {
-        // Collect each layer id we created into an array.
-        layers: layers.map(function(layer, i) {
-            return 'flowDepth1' + i;
-        })
-    });
-
-    if (!features.length) {
-        return;
-    }
-    var feature = features[0];
-    // Initialize a popup and set its coordinates
-    // based on the feature found.
-    var popup = new mapboxgl.Popup()
+    } else if (feature.layer.id == 'flowDepth1'){
+        var popup = new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML('<span>Alternative 1:</span><br />' + feature.properties.Var + ' ft')
         .addTo(map);
-});
-
-map.on('click', function(e) {
-    var features = map.queryRenderedFeatures(e.point, {
-        // Collect each layer id we created into an array.
-        layers: layers.map(function(layer, i) {
-            return 'flowDepth2' + i;
-        })
-    });
-
-    if (!features.length) {
-        return;
-    }
-    var feature = features[0];
-    // Initialize a popup and set its coordinates
-    // based on the feature found.
-    var popup = new mapboxgl.Popup()
+    } else if (feature.layer.id == 'flowDepth2'){
+        var popup = new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML('<span>Alternatives 2 & 3:</span><br />' + feature.properties.Var + ' ft')
         .addTo(map);
-});
+    } else {
+      return;
+    }
+  });
 
 // Use the same approach as above to indicate that the symbols are clickable
 // by changing the cursor style to 'pointer'.
 map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['alt1','alt2','alt3','conduits','junctions','xs','alt1Inlet','alt2Inlet','flowDepth0','flowDepth1','flowDepth2','flowDepth3','flowDepth4','flowDepth5','flowDepth6','flowDepth10','flowDepth11','flowDepth12','flowDepth13','flowDepth14','flowDepth15','flowDepth16','flowDepth20','flowDepth21','flowDepth22','flowDepth23','flowDepth24','flowDepth25','flowDepth26'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['alt1','alt2','alt3','conduits','junctions','xs','alt1Inlet','alt2Inlet','flowDepth','flowDepth1','flowDepth2'] });
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 });
 
