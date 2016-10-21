@@ -155,12 +155,6 @@ map.on('style.load', function () {
         url: 'mapbox://iconeng.00e789e0'
     });
 
-//    renderDepth()
-    renderVelocity()
-//    renderDepth1()
-    renderVelocity1()
-//    renderDepth2()
-    renderVelocity2()
 
     map.addLayer({
         'id': 'flowDepth',
@@ -245,6 +239,14 @@ map.on('style.load', function () {
             'fill-opacity': 0.8
         }
     },'road_label');
+
+    
+//    renderDepth()
+    renderVelocity()
+//    renderDepth1()
+    renderVelocity1()
+//    renderDepth2()
+    renderVelocity2()
 
 // IMPORT FROM PREVIOUS MAP
 

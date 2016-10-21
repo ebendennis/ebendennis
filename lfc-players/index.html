@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>LFC Players in the Premier League</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.deep_orange-lime.min.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-68256524-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+  <style>
+    #map { position:absolute; height: calc(100vh - 64px); width: calc(100vw - 240px); }
+    @media only screen and (max-width: 1024px) {
+      #map {height: calc(100vh - 56px); width: 100%;}
+}
+  </style>
+</head>
+<body>
+<!-- The drawer is always open in large screens. The header is always shown,
+  even in small screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="demo-header mdl-layout__header  mdl-color--red-500 mdl-color-text--red-50">
+    <div class="mdl-layout__header-row">
+    <span class="mdl-layout-title">LFC Players in the Premier League</span>
+      <div class="mdl-layout-spacer"></div>
+        <button class="mdl-button mdl-js-button mdl-button--icon mdl-color-text--red-50 mdl-cell--hide-tablet" id="hdrbtn">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+          <li class="mdl-menu__item" onclick="printCanvas()">Print</li>
+          <li class="mdl-menu__item">Contact</li>
+          <li class="mdl-menu__item">Legal information</li>
+        </ul>
+      </div>
+    </header>
+  </header>
+  <div class="demo-drawer mdl-layout__drawer mdl-color--red-500 mdl-color-text--grey-200 mdl-shadow--2dp">
+    <header class="demo-drawer-header mdl-shadow--2dp">
+          <img src="cofc-logo.svg" class="demo-avatar" style="padding:.8em;max-height:50px;">
+          <img src="http://iconengineering.github.io/images/icon-logo-horizontal.png" class="demo-avatar">
+    </header>
+    <nav class="demo-navigation mdl-navigation mdl-color--red-500">
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <div id='map'></div>
+    </div>
+  </main>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="lfc-players-v24.js">
+</script>
+
+</body>
+</html>
