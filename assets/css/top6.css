@@ -50,6 +50,14 @@ svg {
  stroke-opacity: .25;
 }
 
+.label {
+  fill: #2c3e50;
+}
+
+.label2 {
+  fill: #eee;
+}
+
 .dot2 {
       stroke: rgba(44,62,80,.25);
     }

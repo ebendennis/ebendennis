@@ -104,7 +104,7 @@ d3.csv("../../../assets/js/seasonData.csv", function(error, data) {
               .call(d3.axisBottom(x).tickSizeInner(-height).tickPadding(10).tickSizeOuter(0))
             .append("text")
               .attr("class", "label")
-              .attr("x", width)
+              .attr("x", function(d) {return (width - 5);})
               .attr("y", -6)
               .style("text-anchor", "end")
               .text("Week");
@@ -115,7 +115,8 @@ d3.csv("../../../assets/js/seasonData.csv", function(error, data) {
             .append("text")
               .attr("class", "label")
               .attr("transform", "rotate(-90)")
-              .attr("y", 3)
+              .attr("x", -5)
+              .attr("y", 5)
               .attr("dy", ".71em")
               .style("text-anchor", "end")
               .text("Points");
