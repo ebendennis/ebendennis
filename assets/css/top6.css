@@ -1,0 +1,73 @@
+svg {
+ display: block;
+ margin:auto;
+ font: 10px;
+}
+
+#svg-container3 svg {
+  background-color: rgba(44,62,80,.75);
+}
+
+.centered {
+  display: block;
+  margin:auto;
+  text-align:center;
+}
+
+.domain {
+ fill: none;
+ stroke: #2c3e50;
+ shape-rendering: crispEdges;
+}
+
+.tick line {
+ fill: none;
+ stroke: rgba(44,62,80,.25);
+ stroke-dasharray: 2;
+}
+
+.tick text {
+ fill: #2c3e50;
+}
+
+#svg-container3 .domain {
+ fill: none;
+ stroke: #eee;
+ shape-rendering: crispEdges;
+}
+
+#svg-container3 .tick line {
+  fill:none;
+  stroke: rgba(244,244,244,.25);
+  stroke-dasharray: 2;
+}
+
+#svg-container3 .tick text {
+ fill: #eee;
+}
+
+.dot {
+ stroke-opacity: .25;
+}
+
+.dot2 {
+      stroke: rgba(44,62,80,.25);
+    }
+
+.tooltip, .tooltip2 {
+ position: absolute;
+ width: 55px;
+ padding: 2px;
+ background: white;
+ pointer-events: none;
+ font-size: 10px;
+ line-height: 12px;
+ border-radius: 2px;
+}
+
+.tooltip {
+  height: 28px;
+}
+.tooltip2 {
+  height: 40px;
+}
