@@ -17,4 +17,4 @@ github_username:  ebendennis
 
 # Build settings
 markdown: kramdown
-exclude: [node_modules, gulpfile.js, README.md]
+exclude: [node_modules, gulpfile.js, README.md, lfc-in-europe/img]

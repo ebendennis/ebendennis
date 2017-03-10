@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 
 // Task for building blog when something changed:
-gulp.task('build', shell.task(['jekyll build --watch']));
+gulp.task('build', shell.task(['jekyll build --watch -I']));
 // Or if you don't use bundle:
 // gulp.task('build', shell.task(['jekyll build --watch']));
 gulp.task('styles', function() {
