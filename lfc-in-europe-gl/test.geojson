@@ -1,0 +1,28 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+
+"features": [
+            {"type":"Feature",
+              "geometry":{"type":"Point","coordinates":[-21.8789, 64.14347]},
+              "properties":{
+                "matchID": 236,
+                "opponent": "KR Reykjavik",
+                "season":1965,
+                "comp":"cl",
+                "color1": "#000",
+                "color2": "#F68421"
+                }
+            },
+            {"type":"Feature",
+              "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+              "properties":{
+                "matchID": 244,
+                "opponent": "KR Reykjavik",
+                "season":1965,
+                "comp":"cl",
+                "color1": "#dc0714",
+                "color2": "#ffd700"
+                }
+            }
+]}

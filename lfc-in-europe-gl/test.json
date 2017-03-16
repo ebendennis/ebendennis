@@ -1,0 +1,73 @@
+json = [{
+	"matchID": 236,
+	"opponent": "KR Reykjavik",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#000",
+	"color2": "#F68421",
+	"venue": "Laugardalsv&ouml;llur",
+	"date": "17.08.1964",
+	"round": "Preliminary Round, First Leg",
+	"homeaway": "away",
+	"lfcgoals": [{
+		"name": "Wallace",
+		"time": 2
+	}, {
+		"name": "Hunt",
+		"time": 46
+	}, {
+		"name": "Chisnall",
+		"time": 57
+	}, {
+		"name": "Wallace",
+		"time": 60
+	}, {
+		"name": "Hunt",
+		"time": 88
+	}],
+	"oppgoals": []
+},
+{
+	"matchID": 244,
+	"opponent": "KR Reykjavik",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#dc0714",
+	"color2": "#009982",
+	"venue": "Anfield",
+	"date": "14.09.1964",
+	"round": "Preliminary Round, Second Leg",
+	"homeaway": "home",
+	"lfcgoals": [
+		{
+			"name": "Byrne",
+			"time": 13
+		},
+		{
+			"name": "St John",
+			"time": 23
+		},
+		{
+			"name": "Hunt",
+			"time": 50
+		},
+		{
+			"name": "Graham",
+			"time": 65
+		},
+		{
+			"name": "Stevenson",
+			"time": 67
+		},
+		{
+			"name": "St John",
+			"time": 74
+		}
+	],
+	"oppgoals": [
+		{
+			"name": "Felixson",
+			"time": 36
+		}
+	]
+}]

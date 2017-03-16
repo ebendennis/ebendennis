@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <link href='main.css' rel='stylesheet' />
+    <script src="test.json"></script>
     <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:64px; bottom:0; width:100%; z-index:-1;}
-        .mapboxgl-popup-content {max-height:50vh;overflow-y: auto;}
+
     </style>
 </head>
 <body>
@@ -21,47 +23,123 @@
 <script src='routes.js'></script>
 <header>
   <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper tomato">
       <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
       <a href="#" class="brand-logo center">Liverpool FC in Europe</a>
     </div>
   </nav>
   <ul id="slide-out" class="side-nav">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
     <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
+      <ul class="collapsible" data-collapsible="accordion">
         <li>
-          <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+          <a class="collapsible-header">By Opponent<i class="material-icons">arrow_drop_down</i></a>
           <div class="collapsible-body">
-            <ul>
-              <li><a href="#!">First</a></li>
-              <li><a href="#!">Second</a></li>
-              <li><a href="#!">Third</a></li>
-              <li><a href="#!">Fourth</a></li>
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <a class="collapsible-header">A<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="opponentsA">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">B-C<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="opponentsBC">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">D-G<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="opponentsDG">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">H-K<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="opponentsHK">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">L-N<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="opponentsLN">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">O-R<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="opponentsOR">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">S<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="opponentsS">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">T-Z<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="opponentsTZ">
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
         </li>
         <li>
-          <a class="collapsible-header">Dropdown2<i class="material-icons">arrow_drop_down</i></a>
+          <a class="collapsible-header">By Decade<i class="material-icons">arrow_drop_down</i></a>
           <div class="collapsible-body">
-            <ul>
-              <ul class="collapsible collapsible-accordion">
-                <li>
-                  <a class="collapsible-header">Dropdown Again<i class="material-icons">arrow_drop_down</i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a href="#!">First</a></li>
-                      <li><a href="#!">Second</a></li>
-                      <li><a href="#!">Third</a></li>
-                      <li><a href="#!">Fourth</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-              <li><a href="#!">Second</a></li>
-              <li><a href="#!">Third</a></li>
-              <li><a href="#!">Fourth</a></li>
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <a class="collapsible-header">1960s<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="decade60">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">1970s<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="decade70">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">1980s<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="decade80">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">1990s<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="decade90">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">2000s<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="decade00">
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsible-header">2010s<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                  <ul id="decade10">
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
         </li>
@@ -69,110 +147,24 @@
     </li>
   </ul>
 </header>
-<div id='map'></div>
+<div id="map"></div>
+<div class="container">
+  <div id="info-row" class="row">
+    <div class="col s12 m6 offset-m6 l4 offset-l8 abs">
+        <ul id="info-pane" class="collapsible popout" data-collapsible="accordion">
+            <li>
+              <div id="info-header" class="collapsible-header"><i class="material-icons">arrow_drop_down</i><span id="info-title" class="truncate">LFC in European Competition</span></div>
+              <div id="info-body" class="collapsible-body trans-blue white-text">Select a season or opponent.</div>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>
 
+<script src="map.js"></script>
+<script src="navbar.js"></script>
+<script src="onclick.js"></script>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiZWJlbmRlbm5pcyIsImEiOiJ1M2tMMC0wIn0.HL9nr43JrA_mzhGVBI_B_Q';
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/light-v9', //stylesheet location
-    center: [15.5, 43.3], // starting position
-    pitch: 60,
-    zoom: 4.5, // starting zoom
-    hash: true
-});
-
-// var route = [];
-// $.getJSON('routes.geojson', function(data){
-//     route = data.features;
-// });
-
-var route =  routes
-
-for (var n = 0; n < route.features.length; n++) {
-// Calculate the distance in kilometers between route start/end point.
-var lineDistance = turf.lineDistance(route.features[n], 'kilometers');
-
-var arc = [];
-
-// Draw an arc between the `origin` & `destination` of the two points
-for (var i = 0; i < 501; i++) {
-    var segment = turf.along(route.features[n], i / 500 * lineDistance, 'kilometers');
-    arc.push(segment.geometry.coordinates);
-}
-
-// Update the route with calculated arc coordinates
-route.features[n].geometry.coordinates = arc;
-};
-
-map.on('style.load', function (e) {
-
-  map.addSource('route', {
-        "type": "geojson",
-        "data": route
-    });
-
-  map.addSource('matches', {
-      type: 'geojson',
-      "data": 'matches.geojson'
-  });
-
-    map.addLayer({
-        "id": "route",
-        "source": "route",
-        "type": "line",
-        "paint": {
-            "line-width": 2,
-            "line-color": "#2c3e50"
-        }
-    });
-
-  map.addLayer({
-      'id': 'matches',
-      'type': 'circle',
-      'source': 'matches',
-      'filter': ['==', 'viewAll', 'no'],
-      'paint': {
-          'circle-radius': 3.5,
-          'circle-color': '#e74c3c'
-      }
-  });
-
-});
-
-// When a click event occurs near a place, open a popup at the location of
-// the feature, with description HTML from its properties.
-map.on('click', function (e) {
-    var bbox = [[e.point.x - 2, e.point.y - 2], [e.point.x + 2, e.point.y + 2]];
-    var features = map.queryRenderedFeatures(bbox, { layers: ['matches'] });
-
-    if (!features.length) {
-        return;
-    }
-
-    var div = window.document.createElement('div');
-
-for (var i = 0; i < features.length; i++) {
-    var feature = features[i];
-
-    table = feature.properties.table;
-    div.insertAdjacentHTML( 'beforeend', table );
-};
-    // Populate the popup and set its coordinates
-    // based on the feature found.
-    var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates)
-        .setDOMContent(div)
-        .addTo(map);
-});
-
-// Use the same approach as above to indicate that the symbols are clickable
-// by changing the cursor style to 'pointer'.
-map.on('mousemove', function (e) {
-  var bbox = [[e.point.x - 2, e.point.y - 2], [e.point.x + 2, e.point.y + 2]];
-  var features = map.queryRenderedFeatures(bbox, { layers: ['matches'] });
-    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
-});
 
 $('.button-collapse').sideNav({
     menuWidth: 300, // Default is 300

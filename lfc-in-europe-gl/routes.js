@@ -3,7 +3,14 @@ var routes = {
   "features": [
 {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "matchID": 236,
+        "opponent": "KR Reykjavik",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#000",
+        "color2": "#F68421"
+        },
       "geometry": {
         "type": "LineString",
         "coordinates": [

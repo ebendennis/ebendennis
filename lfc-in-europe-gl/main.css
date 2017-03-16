@@ -1,0 +1,133 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+#map {
+  position:absolute;
+  top:64px;
+  bottom:0;
+  width:100%;
+  z-index:-1;
+}
+
+.mapboxgl-popup-content {
+  max-height:70vh;
+  max-width:45em;
+  overflow-y: auto;
+  background-color: rgba(44, 62, 80, 0.125);
+}
+
+.mapboxgl-popup-tip {
+  border-bottom-color: rgba(44, 62, 80, 0.125) !important;
+  border-top-color: rgba(44, 62, 80, 0.125) !important;
+}
+
+.tomato {
+  background-color: #e74c3c;
+}
+
+.navyblue {
+  background-color: #2c3e50 !important;
+}
+
+.trans-blue {
+  background-color: rgba(44, 62, 80, 0.95);
+}
+
+.row {
+  margin-bottom:2px;
+}
+
+.card {
+  margin: .5rem 0;
+}
+
+.divider {
+  background-color: #e74c3c;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating), .og {
+  color: #e74c3c;
+}
+
+.card .card-action a:hover:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: #ff6656;
+}
+
+.container, #info-row {
+  width: 90%;
+  max-width: 90%;
+  z-index:-2;
+}
+
+.card-content .narrow {
+  line-height: 14px;
+}
+
+.card-content small {
+  font-size: 80%;
+}
+
+#info-body {
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+.card-title {
+  font-size: 21px !important;
+  line-height: 21px !important;
+  margin-top: 8px;
+}
+
+.side-nav .collapsible-body {
+  padding: 0;
+}
+
+.side-nav .collapsible-header {
+  border-bottom: 1px solid #ddd;
+}
+
+.no-pad {
+  padding: 0 !important;
+}
+
+.narrow {
+  margin-bottom: -.5em;
+}
+
+.abs {
+  z-index:1;
+  position:absolute;
+  left: 0 !important;
+}
+
+@media only screen and (max-width : 992px) {
+
+  #map {
+    top: 56px;
+  }
+
+  .brand-logo {
+    font-size: 1.5rem !important;
+  }
+
+  .mapboxgl-popup-content {
+    max-height:50vh;
+    max-width:90vw;
+  }
+
+  .card-content {
+    padding: 8px !important;
+  }
+
+  .card-title {
+    font-size: 14px !important;
+  }
+
+  .goals {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+}
