@@ -14,7 +14,7 @@ opponents.forEach(function(opponent) {
     var opponentLi = document.createElement('li');
     var oppA = document.createElement('a');
     var opponentA = opponentLi.insertAdjacentElement('beforeend', oppA);
-    opponentA.text = opponent;
+    opponentA.innerHTML = opponent;
     opponentA.href = '#';
 
     opponentA.addEventListener('click', function() {
@@ -25,7 +25,7 @@ opponents.forEach(function(opponent) {
 
         var cardTitle = document.getElementById('info-title');
         var cardBody = document.getElementById('info-body');
-        cardTitle.textContent="Liverpool FC v " + opponent;
+        cardTitle.innerHTML="Liverpool v " + opponent;
         cardBody.textContent="";
 
         for (var i = 0; i < oppFilter.length; i++ ) {
@@ -40,8 +40,8 @@ opponents.forEach(function(opponent) {
           else if (d.comp == "sc") { var competition = "European Super Cup"; }
           else if (d.comp == "cwc") { var competition = "UEFA Cup Winners' Cup"; }
 
-          if (d.homeaway == "home") {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">Liverpool FC</span></div><div class="col s2 center-align"><span class="card-title">' + d.lfcgoals.length + ':' + d.oppgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">' + d.opponent + '</span></div></div></div><div class="divider"></div>';}
-          else {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">' + d.opponent + '</span></div><div class="col s2 center-align"><span class="card-title">' + d.oppgoals.length + ':' + d.lfcgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">Liverpool FC</span></div></div></div><div class="divider"></div>';}
+          if (d.homeaway == "home") {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">Liverpool</span></div><div class="col s2 center-align"><span class="card-title">' + d.lfcgoals.length + ':' + d.oppgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">' + d.opponent + '</span></div></div></div><div class="divider"></div>';}
+          else {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">' + d.opponent + '</span></div><div class="col s2 center-align"><span class="card-title">' + d.oppgoals.length + ':' + d.lfcgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">Liverpool</span></div></div></div><div class="divider"></div>';}
 
           cardBody.insertAdjacentHTML('beforeend', topRow);
         };
@@ -109,8 +109,8 @@ seasons.forEach(function(season) {
           else if (d.comp == "sc") { var competition = "European Super Cup"; }
           else if (d.comp == "cwc") { var competition = "UEFA Cup Winners' Cup"; }
 
-          if (d.homeaway == "home") {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">Liverpool FC</span></div><div class="col s2 center-align"><span class="card-title">' + d.lfcgoals.length + ':' + d.oppgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">' + d.opponent + '</span></div></div></div><div class="divider"></div>';}
-          else {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">' + d.opponent + '</span></div><div class="col s2 center-align"><span class="card-title">' + d.oppgoals.length + ':' + d.lfcgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">Liverpool FC</span></div></div></div><div class="divider"></div>';}
+          if (d.homeaway == "home") {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">Liverpool</span></div><div class="col s2 center-align"><span class="card-title">' + d.lfcgoals.length + ':' + d.oppgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">' + d.opponent + '</span></div></div></div><div class="divider"></div>';}
+          else {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">' + d.opponent + '</span></div><div class="col s2 center-align"><span class="card-title">' + d.oppgoals.length + ':' + d.lfcgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">Liverpool</span></div></div></div><div class="divider"></div>';}
 
           cardTitle.textContent= prevSeason + "-" + season + " " + competition;
           cardBody.insertAdjacentHTML('beforeend', topRow);

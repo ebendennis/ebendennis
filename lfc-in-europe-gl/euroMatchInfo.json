@@ -1,0 +1,180 @@
+json = [{
+	"matchID": 236,
+	"opponent": "Reykjavik",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#000",
+	"color2": "#F68421",
+	"venue": "Laugardalsv&ouml;llur",
+	"date": "17.08.1964",
+	"round": "Preliminary Round, First Leg",
+	"homeaway": "away",
+	"lfcgoals": [{
+		"name": "Wallace",
+		"time": 2
+	}, {
+		"name": "Hunt",
+		"time": 46
+	}, {
+		"name": "Chisnall",
+		"time": 57
+	}, {
+		"name": "Wallace",
+		"time": 60
+	}, {
+		"name": "Hunt",
+		"time": 88
+	}],
+	"oppgoals": []
+},
+{
+	"matchID": 244,
+	"opponent": "Reykjavik",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#dc0714",
+	"color2": "#009982",
+	"venue": "Anfield",
+	"date": "14.09.1964",
+	"round": "Preliminary Round, Second Leg",
+	"homeaway": "home",
+	"lfcgoals": [
+		{
+			"name": "Byrne",
+			"time": 13
+		},
+		{
+			"name": "St John",
+			"time": 23
+		},
+		{
+			"name": "Hunt",
+			"time": 50
+		},
+		{
+			"name": "Graham",
+			"time": 65
+		},
+		{
+			"name": "Stevenson",
+			"time": 67
+		},
+		{
+			"name": "St John",
+			"time": 74
+		}
+	],
+	"oppgoals": [
+		{
+			"name": "Felixson",
+			"time": 36
+		}
+	]
+},
+{
+	"matchID": 256,
+	"opponent": "Anderlecht",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#dc0714",
+	"color2": "#ffd700",
+	"venue": "Anfield",
+	"date": "25.11.1964",
+	"round": "1st Round 1st Leg",
+	"homeaway": "home",
+	"lfcgoals": [
+		{
+			"name": "St John",
+			"time": 10
+		},
+		{
+			"name": "Hunt",
+			"time": 43
+		},
+		{
+			"name": "Yeats",
+			"time": 50
+		}
+	],
+	"oppgoals": []
+},
+{
+	"matchID": 260,
+	"opponent": "Anderlecht",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#400080",
+	"color2": "#fff",
+	"venue": "Heysel",
+	"date": "16.12.1964",
+	"round": "1st Round 2nd Leg",
+	"homeaway": "away",
+	"lfcgoals": [
+		{
+			"name": "Hunt",
+			"time": 90
+		}
+	],
+	"oppgoals": []
+},
+{
+	"matchID": 270,
+	"opponent": "K&ouml;ln",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#E3000B",
+	"color2": "#000",
+	"venue": "M&uuml;ngersdorf Stadion",
+	"date": "10.02.1965",
+	"round": "2nd Round 1st Leg",
+	"homeaway": "away",
+	"lfcgoals": [],
+	"oppgoals": []
+},
+{
+	"matchID": 278,
+	"opponent": "K&ouml;ln",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#dc0714",
+	"color2": "#ffd700",
+	"venue": "Anfield",
+	"date": "17.03.1965",
+	"round": "2nd Round 2nd Leg",
+	"homeaway": "home",
+	"lfcgoals": [],
+	"oppgoals": []
+},
+{
+	"matchID": 280,
+	"opponent": "K&ouml;ln",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#E3000B",
+	"color2": "#000",
+	"venue": "Stadion Feijenoord",
+	"date": "24.03.1965",
+	"round": "2nd Round Replay",
+	"homeaway": "away",
+	"lfcgoals": [
+		{
+			"name": "St John",
+			"time": 22
+		},
+		{
+			"name": "Hunt",
+			"time": 37
+		}
+	],
+	"oppgoals": [
+		{
+			"name": "Thielen",
+			"time": 40
+		},
+		{
+			"name": "L&ouml;hr",
+			"time": 48
+		}
+	]
+}
+]

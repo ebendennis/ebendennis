@@ -20,7 +20,14 @@ var routes = {
    },
  {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "matchID": 260,
+        "opponent": "Anderlecht",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#400080",
+        "color2": "#fff"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -30,7 +37,14 @@ var routes = {
    },
  {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "matchID": 270,
+        "opponent": "K&ouml;ln",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#E3000B",
+        "color2": "#000"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -40,7 +54,14 @@ var routes = {
    },
  {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "matchID": 280,
+        "opponent": "K&ouml;ln",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#E3000B",
+        "color2": "#000"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [

@@ -35,7 +35,7 @@ map.on('load', function (e) {
 
   map.addSource('matches', {
       type: 'geojson',
-      "data": 'test.geojson'
+      "data": 'euroMatches.geojson'
   });
 
     map.addLayer({
