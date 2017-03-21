@@ -58,7 +58,7 @@ for (var i = 0; i < features.length; i++) {
     var key = feature.properties.matchID;
     var filter = _.filter(json, ['matchID', key]);
     var d = filter[0];
-
+console.log(filter);
     var newDiv = document.createElement('div');
     var row = div.insertAdjacentElement('afterbegin', newDiv)
     row.className = "row";

@@ -5,7 +5,7 @@ var routes = {
       "type": "Feature",
       "properties": {
         "matchID": 236,
-        "opponent": "KR Reykjavik",
+        "opponent": "Reykjavik",
         "season":1965,
         "comp":"cl",
         "color1": "#000",
