@@ -79,5 +79,27 @@
              "color1": "#E3000B",
              "color2": "#000"
              }
-         }
+         },
+         {"type":"Feature",
+          "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+          "properties":{
+            "matchID": 293,
+            "opponent": "Internazionale",
+            "season":1965,
+            "comp":"cl",
+            "color1": "#dc0714",
+            "color2": "#ffd700"
+            }
+        },
+        {"type":"Feature",
+         "geometry":{"type":"Point","coordinates":[9.12403, 45.47808]},
+         "properties":{
+           "matchID": 294,
+           "opponent": "Internazionale",
+           "season":1965,
+           "comp":"cl",
+           "color1": "#0066AA",
+           "color2": "#000"
+           }
+       }
 ]}

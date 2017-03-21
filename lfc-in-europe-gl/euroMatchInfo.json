@@ -176,5 +176,64 @@ json = [{
 			"time": 48
 		}
 	]
+},
+{
+	"matchID": 293,
+	"opponent": "Internazionale",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#dc0714",
+	"color2": "#ffd700",
+	"venue": "Anfield",
+	"date": "04.05.1965",
+	"round": "Semifinal 1st Leg",
+	"homeaway": "home",
+	"lfcgoals": [
+		{
+			"name": "Hunt",
+			"time": 4
+		},
+		{
+			"name": "Callaghan",
+			"time": 34
+		},
+		{
+			"name": "St John",
+			"time": 75
+		}
+	],
+	"oppgoals": [
+		{
+			"name": "Mazzola",
+			"time": 10
+		}
+	]
+},
+{
+	"matchID": 294,
+	"opponent": "Internazionale",
+	"season":1965,
+	"comp":"cl",
+	"color1": "#0066AA",
+	"color2": "#000",
+	"venue": "San Siro",
+	"date": "12.05.1965",
+	"round": "Semifinal 2nd Leg",
+	"homeaway": "away",
+	"lfcgoals": [],
+	"oppgoals": [
+		{
+			"name": "Corso",
+			"time": 8
+		},
+		{
+			"name": "Peir&oacute;",
+			"time": 9
+		},
+		{
+			"name": "Facchetti",
+			"time": 60
+		}
+	]
 }
 ]

@@ -35,7 +35,7 @@ for (var i = 0; i < features.length; i++) {
 
   function write_oppgoals(){
     for (var n = 0; n < d.oppgoals.length; n++ ) {
-console.log(d.oppgoals.length);
+
       var oppLi = document.createElement('li')
 
       if (d.oppgoals[n].og == true) {
@@ -83,8 +83,8 @@ console.log(d.oppgoals.length);
     else if (d.comp == "sc") { var competition = "European Super Cup"; }
     else if (d.comp == "cwc") { var competition = "UEFA Cup Winners' Cup"; }
 
-    if (d.homeaway == "home") {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">Liverpool</span></div><div class="col s2 center-align"><span class="card-title">' + d.lfcgoals.length + ':' + d.oppgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">' + d.opponent + '</span></div></div></div><div class="divider"></div>';}
-    else {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">' + d.opponent + '</span></div><div class="col s2 center-align"><span class="card-title">' + d.oppgoals.length + ':' + d.lfcgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">Liverpool</span></div></div></div><div class="divider"></div>';}
+    if (d.homeaway == "home") {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">Liverpool FC</span></div><div class="col s2 center-align"><span class="card-title">' + d.lfcgoals.length + ':' + d.oppgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">' + d.opponent + '</span></div></div></div><div class="divider"></div>';}
+    else {var topRow = '<div class="row grey-text lighten-2"><div class="col s12 narrow"><small>' + competition + ' ' + d.round + '</small></div><div class="col s12"><small>' + d.date + ' &middot; ' + d.venue + '</small></div></div><div class="row"><div class="col s12 valign-wrapper"><div class="col s5 left-align no-pad"><span class="card-title">' + d.opponent + '</span></div><div class="col s2 center-align"><span class="card-title">' + d.oppgoals.length + ':' + d.lfcgoals.length + '</span></div><div class="col s5 right-align no-pad"><span class="card-title">Liverpool FC</span></div></div></div><div class="divider"></div>';}
 
     cardContent.insertAdjacentHTML('afterbegin', topRow);
 

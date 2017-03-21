@@ -71,7 +71,14 @@ var routes = {
    },
  {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "matchID": 294,
+        "opponent": "Internazionale",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#0066AA",
+        "color2": "#000"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
