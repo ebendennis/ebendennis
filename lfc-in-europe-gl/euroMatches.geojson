@@ -101,5 +101,104 @@
            "color1": "#0066AA",
            "color2": "#000"
            }
+       },
+       {"type":"Feature",
+        "geometry":{"type":"Point","coordinates":[7.65015, 45.04175]},
+        "properties":{
+          "matchID": 306,
+          "opponent": "Juventus",
+          "season":1966,
+          "comp":"cwc",
+          "color1": "#000",
+          "color2": "#fff"
+          }
+      },
+      {"type":"Feature",
+       "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+       "properties":{
+         "matchID": 309,
+         "opponent": "Juventus",
+         "season":1966,
+         "comp":"cwc",
+         "color1": "#dc0714",
+         "color2": "#ffd700"
+         }
+     },
+     {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 318,
+        "opponent": "Standard Li&egrave;ge",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+        }
+    },
+     {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[5.543268, 50.60992]},
+      "properties":{
+        "matchID": 321,
+        "opponent": "Standard Li&egrave;ge",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#FF1100",
+        "color2": "#988344"
+        }
+    },
+     {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[19.09820, 47.50310]},
+      "properties":{
+        "matchID": 334,
+        "opponent": "Honv&eacute;d",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#FB0019",
+        "color2": "#000"
+        }
+    },
+    {"type":"Feature",
+     "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+     "properties":{
+       "matchID": 335,
+       "opponent": "Honv&eacute;d",
+       "season":1966,
+       "comp":"cwc",
+       "color1": "#dc0714",
+       "color2": "#ffd700"
        }
+   },
+    {"type":"Feature",
+     "geometry":{"type":"Point","coordinates":[-4.20556, 55.84976]},
+     "properties":{
+       "matchID": 342,
+       "opponent": "Celtic",
+       "season":1966,
+       "comp":"cwc",
+       "color1": "#018749",
+       "color2": "#fff"
+       }
+   },
+   {"type":"Feature",
+    "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+    "properties":{
+      "matchID": 344,
+      "opponent": "Celtic",
+      "season":1966,
+      "comp":"cwc",
+      "color1": "#dc0714",
+      "color2": "#ffd700"
+      }
+  },
+   {"type":"Feature",
+    "geometry":{"type":"Point","coordinates":[-4.25176, 55.82584]},
+    "properties":{
+      "matchID": 347,
+      "opponent": "Borussia Dortmund",
+      "season":1966,
+      "comp":"cwc",
+      "color1": "#FDE100",
+      "color2": "#000"
+      }
+  }
 ]}

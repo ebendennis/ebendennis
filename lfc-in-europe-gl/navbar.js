@@ -7,7 +7,7 @@ var opponentsLN = document.getElementById('opponentsLN');
 var opponentsOR = document.getElementById('opponentsOR');
 var opponentsS = document.getElementById('opponentsS');
 var opponentsTZ = document.getElementById('opponentsTZ');
-var opponents = _.sortedUniq(_.map(json, 'opponent'));
+var opponents = _.sortedUniq(_.sortBy(_.map(json, 'opponent')));
 
 opponents.forEach(function(opponent) {
 
