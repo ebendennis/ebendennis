@@ -1,130 +1,130 @@
 {
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "type": "FeatureCollection",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 
-"features": [
-            {"type":"Feature",
-              "geometry":{"type":"Point","coordinates":[-21.8789, 64.14347]},
-              "properties":{
-                "matchID": 236,
-                "opponent": "Reykjavik",
-                "season":1965,
-                "comp":"cl",
-                "color1": "#000",
-                "color2": "#F68421"
-                }
-            },
-            {"type":"Feature",
-              "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
-              "properties":{
-                "matchID": 244,
-                "opponent": "Reykjavik",
-                "season":1965,
-                "comp":"cl",
-                "color1": "#dc0714",
-                "color2": "#ffd700"
-                }
-            },
-            {"type":"Feature",
-             "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
-             "properties":{
-               "matchID": 256,
-               "opponent": "Anderlecht",
-               "season":1965,
-               "comp":"cl",
-               "color1": "#dc0714",
-               "color2": "#ffd700"
-               }
-           },
-           {"type":"Feature",
-             "geometry":{"type":"Point","coordinates":[4.33387, 50.89581]},
-             "properties":{
-               "matchID": 260,
-               "opponent": "Anderlecht",
-               "season":1965,
-               "comp":"cl",
-               "color1": "#400080",
-               "color2": "#fff"
-               }
-           },
-           {"type":"Feature",
-             "geometry":{"type":"Point","coordinates":[6.87516, 50.93347]},
-             "properties":{
-               "matchID": 270,
-               "opponent": "K&ouml;ln",
-               "season":1965,
-               "comp":"cl",
-               "color1": "#E3000B",
-               "color2": "#000"
-               }
-           },
-           {"type":"Feature",
-            "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
-            "properties":{
-              "matchID": 278,
-              "opponent": "K&ouml;ln",
-              "season":1965,
-              "comp":"cl",
-              "color1": "#dc0714",
-              "color2": "#ffd700"
-              }
-          },
-          {"type":"Feature",
-           "geometry":{"type":"Point","coordinates":[4.52320, 51.89385]},
-           "properties":{
-             "matchID": 280,
-             "opponent": "K&ouml;ln",
-             "season":1965,
-             "comp":"cl",
-             "color1": "#E3000B",
-             "color2": "#000"
-             }
-         },
-         {"type":"Feature",
-          "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
-          "properties":{
-            "matchID": 293,
-            "opponent": "Internazionale",
-            "season":1965,
-            "comp":"cl",
-            "color1": "#dc0714",
-            "color2": "#ffd700"
-            }
-        },
-        {"type":"Feature",
-         "geometry":{"type":"Point","coordinates":[9.12403, 45.47808]},
-         "properties":{
-           "matchID": 294,
-           "opponent": "Internazionale",
-           "season":1965,
-           "comp":"cl",
-           "color1": "#0066AA",
-           "color2": "#000"
-           }
-       },
-       {"type":"Feature",
-        "geometry":{"type":"Point","coordinates":[7.65015, 45.04175]},
-        "properties":{
-          "matchID": 306,
-          "opponent": "Juventus",
-          "season":1966,
-          "comp":"cwc",
-          "color1": "#000",
-          "color2": "#fff"
-          }
-      },
-      {"type":"Feature",
-       "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
-       "properties":{
-         "matchID": 309,
-         "opponent": "Juventus",
-         "season":1966,
-         "comp":"cwc",
-         "color1": "#dc0714",
-         "color2": "#ffd700"
-         }
-     },
-     {"type":"Feature",
+  "features": [
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-21.8789, 64.14347]},
+      "properties":{
+        "matchID": 236,
+        "opponent": "Reykjavik",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#000",
+        "color2": "#F68421"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 244,
+        "opponent": "Reykjavik",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 256,
+        "opponent": "Anderlecht",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[4.33387, 50.89581]},
+      "properties":{
+        "matchID": 260,
+        "opponent": "Anderlecht",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#400080",
+        "color2": "#fff"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[6.87516, 50.93347]},
+      "properties":{
+        "matchID": 270,
+        "opponent": "K&ouml;ln",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#E3000B",
+        "color2": "#000"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 278,
+        "opponent": "K&ouml;ln",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[4.52320, 51.89385]},
+      "properties":{
+        "matchID": 280,
+        "opponent": "K&ouml;ln",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#E3000B",
+        "color2": "#000"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 293,
+        "opponent": "Internazionale",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[9.12403, 45.47808]},
+      "properties":{
+        "matchID": 294,
+        "opponent": "Internazionale",
+        "season":1965,
+        "comp":"cl",
+        "color1": "#0066AA",
+        "color2": "#000"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[7.65015, 45.04175]},
+      "properties":{
+        "matchID": 306,
+        "opponent": "Juventus",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#000",
+        "color2": "#fff"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 309,
+        "opponent": "Juventus",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
+    {"type":"Feature",
       "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
       "properties":{
         "matchID": 318,
@@ -133,9 +133,9 @@
         "comp":"cwc",
         "color1": "#dc0714",
         "color2": "#ffd700"
-        }
+      }
     },
-     {"type":"Feature",
+    {"type":"Feature",
       "geometry":{"type":"Point","coordinates":[5.543268, 50.60992]},
       "properties":{
         "matchID": 321,
@@ -144,9 +144,9 @@
         "comp":"cwc",
         "color1": "#FF1100",
         "color2": "#988344"
-        }
+      }
     },
-     {"type":"Feature",
+    {"type":"Feature",
       "geometry":{"type":"Point","coordinates":[19.09820, 47.50310]},
       "properties":{
         "matchID": 334,
@@ -155,50 +155,106 @@
         "comp":"cwc",
         "color1": "#FB0019",
         "color2": "#000"
-        }
+      }
     },
     {"type":"Feature",
-     "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
-     "properties":{
-       "matchID": 335,
-       "opponent": "Honv&eacute;d",
-       "season":1966,
-       "comp":"cwc",
-       "color1": "#dc0714",
-       "color2": "#ffd700"
-       }
-   },
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 335,
+        "opponent": "Honv&eacute;d",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
     {"type":"Feature",
-     "geometry":{"type":"Point","coordinates":[-4.20556, 55.84976]},
-     "properties":{
-       "matchID": 342,
-       "opponent": "Celtic",
-       "season":1966,
-       "comp":"cwc",
-       "color1": "#018749",
-       "color2": "#fff"
-       }
-   },
-   {"type":"Feature",
-    "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
-    "properties":{
-      "matchID": 344,
-      "opponent": "Celtic",
-      "season":1966,
-      "comp":"cwc",
-      "color1": "#dc0714",
-      "color2": "#ffd700"
+      "geometry":{"type":"Point","coordinates":[-4.20556, 55.84976]},
+      "properties":{
+        "matchID": 342,
+        "opponent": "Celtic",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#018749",
+        "color2": "#fff"
       }
-  },
-   {"type":"Feature",
-    "geometry":{"type":"Point","coordinates":[-4.25176, 55.82584]},
-    "properties":{
-      "matchID": 347,
-      "opponent": "Borussia Dortmund",
-      "season":1966,
-      "comp":"cwc",
-      "color1": "#FDE100",
-      "color2": "#000"
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 344,
+        "opponent": "Celtic",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
       }
-  }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-4.25176, 55.82584]},
+      "properties":{
+        "matchID": 347,
+        "opponent": "Borussia Dortmund",
+        "season":1966,
+        "comp":"cwc",
+        "color1": "#FDE100",
+        "color2": "#000"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 359,
+        "opponent": "Petrolul Ploie&#351;ti",
+        "season":1967,
+        "comp":"cl",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[26.033333, 44.940278]},
+      "properties":{
+        "matchID": 362,
+        "opponent": "Petrolul Ploie&#351;ti",
+        "season":1967,
+        "comp":"cl",
+        "color1": "#FFDF00",
+        "color2": "#152CCA"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[4.33387, 50.89581]},
+      "properties":{
+        "matchID": 364,
+        "opponent": "Petrolul Ploie&#351;ti",
+        "season":1967,
+        "comp":"cl",
+        "color1": "#FFDF00",
+        "color2": "#152CCA"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[4.854192, 52.343417]},
+      "properties":{
+        "matchID": 372,
+        "opponent": "Ajax",
+        "season":1967,
+        "comp":"cl",
+        "color1": "#ff0000",
+        "color2": "#fff"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 374,
+        "opponent": "Ajax",
+        "season":1967,
+        "comp":"cl",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    }
+
 ]}

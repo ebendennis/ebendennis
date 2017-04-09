@@ -243,12 +243,17 @@ json = [{
 	"comp":"cwc",
 	"color1": "#000",
 	"color2": "#fff",
- 	"venue": "",
- 	"date": "",
- 	"round": "",
+ 	"venue": "Stadio Communale",
+ 	"date": "29.09.1965",
+ 	"round": "1st Round 1st Leg",
  	"homeaway": "away",
  	"lfcgoals": [],
- 	"oppgoals": []
+ 	"oppgoals": [
+		{
+			"name": "Leoncini",
+			"time": 81
+		}
+	]
 },
 {
 	"matchID": 309,
@@ -258,10 +263,19 @@ json = [{
 	"color1": "#dc0714",
 	"color2": "#ffd700",
 	"venue": "Anfield",
-	"date": "",
-	"round": "",
+	"date": "13.10.1965",
+	"round": "1st Round 2nd Leg",
 	"homeaway": "home",
-	"lfcgoals": [],
+	"lfcgoals": [
+		{
+			"name": "Lawler",
+			"time": 19
+		},
+		{
+			"name": "Strong",
+			"time": 24
+		}
+	],
  	"oppgoals": []
 },
 {
@@ -272,11 +286,29 @@ json = [{
  "color1": "#dc0714",
  "color2": "#ffd700",
  "venue": "Anfield",
- "date": "",
- "round": "",
+ "date": "01.12.1965",
+ "round": "2nd Round 1st Leg",
  "homeaway": "home",
- "lfcgoals": [],
- "oppgoals": []
+ "lfcgoals": [
+	 {
+		 "name": "Lawler",
+		 "time": 2
+	 },
+	 {
+		 "name": "Lawler",
+		 "time": 49
+	 },
+	 {
+		 "name": "Thompson",
+		 "time": 72
+	 }
+ ],
+ "oppgoals": [
+	 {
+		 "name": "Storme",
+		 "time": 57
+	 }
+ ]
 },
 {
  "matchID": 321,
@@ -285,12 +317,26 @@ json = [{
  "comp":"cwc",
  "color1": "#FF1100",
  "color2": "#988344",
- "venue": "",
- "date": "",
- "round": "",
+ "venue": "Stade de Sclessin",
+ "date": "15.12.1965",
+ "round": "2nd Round 2nd Leg",
  "homeaway": "away",
- "lfcgoals": [],
- "oppgoals": []
+ "lfcgoals": [
+	 {
+		 "name": "Hunt",
+		 "time":51
+	 },
+	 {
+		 "name": "St John",
+		 "time":57
+	 }
+ ],
+ "oppgoals": [
+	 {
+		 "name": "Claessen",
+		 "time":43
+	 }
+ ]
 },
 {
  "matchID": 334,
@@ -299,9 +345,9 @@ json = [{
  "comp":"cwc",
  "color1": "#FB0019",
  "color2": "#000",
- "venue": "",
- "date": "",
- "round": "",
+ "venue": "N&eacute;pstadion",
+ "date": "01.03.1966",
+ "round": "3rd Round 1st Leg",
  "homeaway": "away",
  "lfcgoals": [],
  "oppgoals": []
@@ -314,10 +360,19 @@ json = [{
 	"color1": "#dc0714",
 	"color2": "#ffd700",
 	"venue": "Anfield",
-	"date": "",
-	"round": "",
+	"date": "08.03.1966",
+	"round": "3rd Round 2nd Leg",
 	"homeaway": "home",
-	"lfcgoals": [],
+	"lfcgoals": [
+		{
+			"name": "Lawler",
+			"time": 28
+		},
+		{
+			"name": "St John",
+			"time": 47
+		}
+	],
  	"oppgoals": []
 },
 {
@@ -327,12 +382,17 @@ json = [{
 	"comp":"cwc",
 	"color1": "#018749",
 	"color2": "#fff",
- 	"venue": "",
- 	"date": "",
- 	"round": "",
+ 	"venue": "Celtic Park",
+ 	"date": "14.04.1966",
+ 	"round": "Semifinal 1st Leg",
  	"homeaway": "away",
  	"lfcgoals": [],
- 	"oppgoals": []
+ 	"oppgoals": [
+		{
+			"name": "Lennox",
+			"time": 52
+		}
+	]
 },
 {
 	"matchID": 344,
@@ -342,10 +402,19 @@ json = [{
 	"color1": "#dc0714",
 	"color2": "#ffd700",
 	"venue": "Anfield",
-	"date": "",
-	"round": "",
+	"date": "19.04.1966",
+	"round": "Semifinal 2nd Leg",
 	"homeaway": "home",
-	"lfcgoals": [],
+	"lfcgoals": [
+		{
+			"name": "Smith",
+			"time":61
+		},
+		{
+			"name": "Strong",
+			"time":67
+		}
+	],
  	"oppgoals": []
 },
 {
@@ -355,11 +424,96 @@ json = [{
 	"comp":"cwc",
 	"color1": "#FDE100",
 	"color2": "#000",
- 	"venue": "",
- 	"date": "",
- 	"round": "",
+ 	"venue": "Hampden Park",
+ 	"date": "05.05.1966",
+ 	"round": "Final",
  	"homeaway": "away",
- 	"lfcgoals": [],
- 	"oppgoals": []
+ 	"lfcgoals": [
+		{
+			"name": "Hunt",
+			"time":68
+		}
+	],
+ 	"oppgoals": [
+		{
+			"name": "Held",
+			"time":61
+		},
+		{
+			"name": "Yeats",
+			"time":107,
+			"og": true
+		}
+	]
+},
+{
+	"matchID": 359,
+	"opponent": "Petrolul Ploie&#351;ti",
+	"season":1967,
+	"comp":"cl",
+	"color1": "#dc0714",
+	"color2": "#ffd700",
+  "venue": "Anfield",
+  "date": "28.09.1966",
+  "round": "1st Round 1st Leg",
+  "homeaway": "home",
+  "lfcgoals": [],
+  "oppgoals": []
+},
+{
+	"matchID": 362,
+	"opponent": "Petrolul Ploie&#351;ti",
+	"season":1967,
+	"comp":"cl",
+	"color1": "#FFDF00",
+	"color2": "#152CCA",
+  "venue": "Ploie&#351;ti Stadium",
+  "date": "12.10.1966",
+  "round": "1st Round 2nd Leg",
+  "homeaway": "away",
+  "lfcgoals": [],
+  "oppgoals": []
+},
+{
+	"matchID": 364,
+	"opponent": "Petrolul Ploie&#351;ti",
+	"season":1967,
+	"comp":"cl",
+	"color1": "#FFDF00",
+	"color2": "#152CCA",
+  "venue": "Heysel",
+  "date": "19.10.1966",
+  "round": "1st Round Replay",
+  "homeaway": "away",
+  "lfcgoals": [],
+  "oppgoals": []
+},
+{
+	"matchID": 372,
+	"opponent": "Ajax",
+	"season":1967,
+	"comp":"cl",
+	"color1": "#ff0000",
+	"color2": "#fff",
+  "venue": "Olympic Stadium",
+  "date": "07.12.1966",
+  "round": "2nd Round 1st Leg",
+  "homeaway": "away",
+  "lfcgoals": [],
+  "oppgoals": []
+},
+{
+	"matchID": 374,
+	"opponent": "Ajax",
+	"season":1967,
+	"comp":"cl",
+	"color1": "#dc0714",
+	"color2": "#ffd700",
+  "venue": "Anfield",
+  "date": "14.12.1966",
+  "round": "2nd Round 2nd Leg",
+  "homeaway": "home",
+  "lfcgoals": [],
+  "oppgoals": []
 }
 ]
