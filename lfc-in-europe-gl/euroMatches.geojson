@@ -255,6 +255,72 @@
         "color1": "#dc0714",
         "color2": "#ffd700"
       }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[12.989267, 55.586081]},
+      "properties":{
+        "matchID": 410,
+        "opponent": "Malm&ouml;",
+        "season":1968,
+        "comp":"el",
+        "color1": "#008ECB",
+        "color2": "#fff"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 414,
+        "opponent": "Malm&ouml;",
+        "season":1968,
+        "comp":"el",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 420,
+        "opponent": "TSV 1860 M&uuml;nchen",
+        "season":1968,
+        "comp":"el",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[11.57456, 48.11102]},
+      "properties":{
+        "matchID": 422,
+        "opponent": "TSV 1860 M&uuml;nchen",
+        "season":1968,
+        "comp":"el",
+        "color1": "#24AFFF",
+        "color2": "#fff"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[19.0982, 47.5031]},
+      "properties":{
+        "matchID": 425,
+        "opponent": "Ferencv&aacute;ros",
+        "season":1968,
+        "comp":"el",
+        "color1": "#006E3B",
+        "color2": "#B0932E"
+      }
+    },
+    {"type":"Feature",
+      "geometry":{"type":"Point","coordinates":[-2.96073, 53.43087]},
+      "properties":{
+        "matchID": 433,
+        "opponent": "Ferencv&aacute;ros",
+        "season":1968,
+        "comp":"el",
+        "color1": "#dc0714",
+        "color2": "#ffd700"
+      }
     }
 
 ]}

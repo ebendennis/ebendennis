@@ -33,7 +33,7 @@ json = [{
 	"season":1965,
 	"comp":"cl",
 	"color1": "#dc0714",
-	"color2": "#009982",
+	"color2": "#ffd700",
 	"venue": "Anfield",
 	"date": "14.09.1964",
 	"round": "Preliminary Round, Second Leg",
@@ -457,7 +457,16 @@ json = [{
   "date": "28.09.1966",
   "round": "1st Round 1st Leg",
   "homeaway": "home",
-  "lfcgoals": [],
+  "lfcgoals": [
+		{
+			"name": "St John",
+			"time": 71
+		},
+		{
+			"name": "Callaghan",
+			"time": 80
+		}
+	],
   "oppgoals": []
 },
 {
@@ -471,8 +480,26 @@ json = [{
   "date": "12.10.1966",
   "round": "1st Round 2nd Leg",
   "homeaway": "away",
-  "lfcgoals": [],
-  "oppgoals": []
+  "lfcgoals": [
+		{
+			"name": "Hunt",
+			"time": 50
+		}
+	],
+  "oppgoals": [
+		{
+			"name": "Dridea",
+			"time": 34
+		},
+		{
+			"name": "Boc",
+			"time": 59
+		},
+		{
+			"name": "Dridea",
+			"time": 65
+		}
+	]
 },
 {
 	"matchID": 364,
@@ -485,7 +512,16 @@ json = [{
   "date": "19.10.1966",
   "round": "1st Round Replay",
   "homeaway": "away",
-  "lfcgoals": [],
+  "lfcgoals": [
+		{
+			"name": "St John",
+			"time": 13
+		},
+		{
+			"name": "Thompson",
+			"time": 43
+		}
+	],
   "oppgoals": []
 },
 {
@@ -499,8 +535,34 @@ json = [{
   "date": "07.12.1966",
   "round": "2nd Round 1st Leg",
   "homeaway": "away",
-  "lfcgoals": [],
-  "oppgoals": []
+  "lfcgoals": [
+		{
+			"name": "Lawler",
+			"time": 90
+		}
+	],
+  "oppgoals": [
+		{
+			"name": "de Wolf",
+			"time": 3
+		},
+		{
+			"name": "Cruyff",
+			"time": 16
+		},
+		{
+			"name": "Nuninga",
+			"time": 38
+		},
+		{
+			"name": "Nuninga",
+			"time": 42
+		},
+		{
+			"name": "Groot",
+			"time": 76
+		}
+	]
 },
 {
 	"matchID": 374,
@@ -513,7 +575,139 @@ json = [{
   "date": "14.12.1966",
   "round": "2nd Round 2nd Leg",
   "homeaway": "home",
-  "lfcgoals": [],
-  "oppgoals": []
+  "lfcgoals": [
+		{
+			"name": "Hunt",
+			"time": 54
+		},
+		{
+			"name": "Hunt",
+			"time": 88
+		}
+	],
+  "oppgoals": [
+		{
+			"name": "Cruyff",
+			"time": 49
+		},
+		{
+			"name": "Cruyff",
+			"time": 71
+		}
+	]
+},
+{
+		"matchID": 410,
+		"opponent": "Malm&ouml;",
+		"season":1968,
+		"comp":"el",
+		"color1": "#008ECB",
+		"color2": "#fff",
+	 	"venue": "Stadio Communale",
+	 	"date": "29.09.1965",
+	 	"round": "1st Round 1st Leg",
+	 	"homeaway": "away",
+	 	"lfcgoals": [],
+	 	"oppgoals": [
+			{
+				"name": "Leoncini",
+				"time": 81
+			}
+		]
+},
+{
+		"matchID": 414,
+		"opponent": "Malm&ouml;",
+		"season":1968,
+		"comp":"el",
+		"color1": "#dc0714",
+		"color2": "#ffd700",
+	 	"venue": "Stadio Communale",
+	 	"date": "29.09.1965",
+	 	"round": "1st Round 1st Leg",
+	 	"homeaway": "away",
+	 	"lfcgoals": [],
+	 	"oppgoals": [
+			{
+				"name": "Leoncini",
+				"time": 81
+			}
+		]
+},
+{
+		"matchID": 420,
+		"opponent": "TSV 1860 M&uuml;nchen",
+		"season":1968,
+		"comp":"el",
+		"color1": "#dc0714",
+		"color2": "#ffd700",
+	 	"venue": "Stadio Communale",
+	 	"date": "29.09.1965",
+	 	"round": "1st Round 1st Leg",
+	 	"homeaway": "away",
+	 	"lfcgoals": [],
+	 	"oppgoals": [
+			{
+				"name": "Leoncini",
+				"time": 81
+			}
+		]
+},
+{
+		"matchID": 422,
+		"opponent": "TSV 1860 M&uuml;nchen",
+		"season":1968,
+		"comp":"el",
+		"color1": "#24AFFF",
+		"color2": "#fff",
+	 	"venue": "Stadio Communale",
+	 	"date": "29.09.1965",
+	 	"round": "1st Round 1st Leg",
+	 	"homeaway": "away",
+	 	"lfcgoals": [],
+	 	"oppgoals": [
+			{
+				"name": "Leoncini",
+				"time": 81
+			}
+		]
+},
+{
+		"matchID": 425,
+		"opponent": "Ferencv&aacute;ros",
+		"season":1968,
+		"comp":"el",
+		"color1": "#006E3B",
+		"color2": "#B0932E",
+	 	"venue": "Stadio Communale",
+	 	"date": "29.09.1965",
+	 	"round": "1st Round 1st Leg",
+	 	"homeaway": "away",
+	 	"lfcgoals": [],
+	 	"oppgoals": [
+			{
+				"name": "Leoncini",
+				"time": 81
+			}
+		]
+},
+{
+		"matchID": 433,
+		"opponent": "Ferencv&aacute;ros",
+		"season":1968,
+		"comp":"el",
+		"color1": "#dc0714",
+		"color2": "#ffd700",
+	 	"venue": "Stadio Communale",
+	 	"date": "29.09.1965",
+	 	"round": "1st Round 1st Leg",
+	 	"homeaway": "away",
+	 	"lfcgoals": [],
+	 	"oppgoals": [
+			{
+				"name": "Leoncini",
+				"time": 81
+			}
+		]
 }
 ]
