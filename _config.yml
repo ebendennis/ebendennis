@@ -7,7 +7,7 @@
 
 # Site settings
 title: ebendennis.github.io
-email: eben@crosstie.io
+email: eben@crosstie.co
 description: > # this means to ignore newlines until "baseurl:"
   Cartography | Web Mapping | Desktop GIS
 baseurl: "" # the subpath of your site, e.g. /blog
