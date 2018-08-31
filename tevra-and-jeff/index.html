@@ -27,6 +27,20 @@
         width: 100%;
       }
     }
+
+    @supports (padding-top: constant(safe-area-inset-top)) {
+      #map {
+        --safe-area-inset-top: constant(safe-area-inset-top);
+        height: calc(100% + var(--safe-area-inset-top));
+      }
+    }
+
+    @supports (padding-top: env(safe-area-inset-top)) {
+      #map {
+        --safe-area-inset-top: env(safe-area-inset-top);
+        height: calc(100% + var(--safe-area-inset-top));
+      }
+    }
   </style>
 </head>
 <body>
@@ -35,7 +49,7 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
   mdl-layout--fixed-header">
   <header class="demo-header mdl-layout__header  mdl-color--blue-grey-900 mdl-color-text--blue-grey-200">
-    <div class="demo-header__background_image"></div>
+    <!-- <div class="demo-header__background_image"></div> -->
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title">Tevra + Jeff</span>
       <div class="mdl-layout-spacer"></div>
@@ -50,8 +64,8 @@
   </header>
   <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50 mdl-shadow--2dp">
     <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-900">
-      <div class="demo-navigation__background_image">
-      </div>
+      <!-- <div class="demo-navigation__background_image">
+      </div> -->
       <img src="h2.png" class="demo-avatar" style="padding:1em;width:40%;height:auto;margin-left:auto;margin-right:auto;">
       <span class="demo-section-title mdl-color-text--blue-grey-50"></span>
       <div id="menu">
