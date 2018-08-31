@@ -15,13 +15,38 @@
  */
 
  html, body {
-  font-family: 'Cormorant Garamond', serif;
-}
-.mdl-layout-title, .mdl-list__item {
   font-family: 'Proza Libre', serif;
+}
+.mdl-layout-title {
+  font-family: 'Proza Libre', serif;
+  font-weight: 700;
+}
+.mdl-list__item {
+  font-family: 'Proza Libre', serif;
+  font-weight: 500;
 }
 .mdl-color-text--blue-grey-200 {
   color: oldlace !important;
+}
+.mdl-menu__link {
+  text-decoration: none;
+  color: inherit;
+}
+.demo-header__background_image {
+  opacity: 0.2;
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;   
+  background-image: url('https://static.xoedge.com/xo-guest-services/assets/guest/themes/glowing_ceremony/theme_image-d9ddc61383c6f94f59f095ceb3521ef8.png');
+}
+.demo-navigation__background_image {
+  opacity: 0.1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;   
+  background-image: url('https://static.xoedge.com/xo-guest-services/assets/guest/themes/glowing_ceremony/background_image-9d8f68630b522d347eb8b54aa7afa14a.jpg');
 }
 .demo-avatar, .demo-drawer-header.mdl-card {
   max-width: 100%;
@@ -72,7 +97,7 @@
 
 .demo-navigation {
   flex-grow: 1;
-  padding-top: .25em !important;
+  padding-top: 0 !important;
 }
 .demo-layout .demo-navigation .mdl-navigation__link {
   display: flex !important;
@@ -237,4 +262,38 @@ _:-ms-input-placeholder, :root .demo-graph {
   height: 12px !important;
   line-height: 12px;
   padding-top: 2px;
+}
+#landmark .mdl-switch.is-checked .mdl-switch__thumb {
+  background: rgb(252,252,98) !important;
+}
+#landmark .mdl-switch.is-checked .mdl-switch__track {
+  background: rgba(252,252,98,0.5) !important;
+}
+#venues .mdl-switch.is-checked .mdl-switch__thumb {
+  background: rgb(38,166,154) !important;
+}
+#venues .mdl-switch.is-checked .mdl-switch__track {
+  background: rgba(38,166,154,0.5) !important;
+}
+#hotel .mdl-switch.is-checked .mdl-switch__thumb {
+  background: rgb(191,90,117) !important;
+}
+#hotel .mdl-switch.is-checked .mdl-switch__track {
+  background: rgba(191,90,117,0.5) !important;
+}
+#foods .mdl-switch.is-checked .mdl-switch__thumb {
+  background: rgb(178,136,192) !important;
+}
+#foods .mdl-switch.is-checked .mdl-switch__track {
+  background: rgba(178,136,192,0.5) !important;
+}
+.popup-title {
+  font-family: 'Proza Libre', serif;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+.mapboxgl-popup-content {
+  font-family: 'Proza Libre', serif;
+  font-weight: 500;
+  font-size: 1.1em;
 }

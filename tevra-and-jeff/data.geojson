@@ -1,0 +1,345 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "landmark",
+        "name": "Lower Bidwell Park",
+        "address": "1912 East 8th Street"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.809051,
+          39.744124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "landmark",
+        "name": "Upper Bidwell Park",
+        "address": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.749074,
+          39.779766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "landmark",
+        "name": "Bidwell Mansion Historic Site",
+        "address": "525 Esplanade"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.843437,
+          39.732876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "landmark",
+        "name": "Orient & Flume Art Glass Co",
+        "address": "6702, 2161 Park Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.818963,
+          39.717749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "landmark",
+        "name": "Chico State University",
+        "address": "400 W. 1st Street"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.847434,
+          39.729652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "landmark",
+        "name": "Honey Run Covered Bridge",
+        "address": "1670 Honey Run Road"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.703744,
+          39.728504
+        ]
+      }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "Burgers and Brew",
+            "address": "301 Broadway St",
+            "desc": "Good Burgers etc."
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+            -121.840146,
+            39.729001
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "Onami",
+            "address": "128 W 2nd St",
+            "desc": "Sushi"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+            -121.840936,
+            39.730139
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "B Street Bar and Grill",
+            "address": "117 Broadway St",
+            "desc": "Bar type food"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.841701,
+                39.730294
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "The Bear",
+            "address": "316 W 2nd St",
+            "desc": "Burgers (classic Chico landmark)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.842478,
+                39.729093
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "Hudson's Gastro Pub",
+            "address": "2760 Esplanade #100",
+            "desc": "Pub food"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.864286,
+                39.760177
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "Italian Cottage",
+            "address": "2525 Dominic Dr B (also @ 2234 Esplanade)",
+            "desc": "Name says it all"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.787802,
+                39.713300
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "Sierra Nevada Brewery",
+            "address": "1075 E 20th St",
+            "desc": "A bit of everything (Chico landmark)"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.814935,
+                39.724612
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "Shubert's Ice Cream Parlor",
+            "address": "178 E 7th St",
+            "desc": "Homemade ice cream & candy"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.836006,
+                39.727345
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "Chan Pheng's Manderin Cuisine",
+            "address": "1140 Mangrove Ave E",
+            "desc": "Chinese"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.837805,
+                39.742263
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "food",
+            "name": "Ricardos",
+            "address": "2365 Esplanade",
+            "desc": "American Mexican"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.858567,
+                39.753529
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hotel",
+            "name": "Oxford Suites",
+            "address": "2035 Business Ln"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.805737,
+                39.724789
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hotel",
+            "name": "Best Western Heritage Inn",
+            "address": "25 Heritage Lane"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.845512,
+                39.755549
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hotel",
+            "name": "Ramada Plaza",
+            "address": "685 Manzaita Court"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.843938,
+                39.752071
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hotel",
+            "name": "Courtyard by Marriot",
+            "address": "2481 Carmichael Dr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.803931,
+                39.716324
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "venue",
+            "name": "Wedding Venue",
+            "address": "2459 Honey Run Road"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.679367,
+                39.742657
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "venue",
+            "name": "Tevra + Jeff's House",
+            "address": "1719 Arbutus  Ave"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.841564,
+                39.748860
+            ]
+        }
+    }
+  ]
+}
