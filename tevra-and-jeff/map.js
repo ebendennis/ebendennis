@@ -96,3 +96,7 @@ map.addControl(new mapboxgl.GeolocateControl({
     },
     trackUserLocation: true
 }));
+
+map.on('load', function(){
+    map.resize();
+});
