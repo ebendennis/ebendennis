@@ -23,7 +23,7 @@ d3.csv("../../../assets/js/seasonData.csv", function(error, data) {
   if (error) throw error;
 
   x.domain([1,42]);
-  y.domain([0,90]);
+  y.domain([0,115]);
 
      var nestData = d3.nest()
       .key(function(d) { return +d.week; })
@@ -80,7 +80,7 @@ d3.csv("../../../assets/js/seasonData.csv", function(error, data) {
       .attr("r", 3.5)
       .attr("cx", function(d) { return x(d.week); })
       .attr("cy", function(d) { return y(d.points); })
-      .style("fill", function(d) {if (d.season == "16-17") {return "#e74c3c";} else {return "rgba(0,0,0,0)";}; })
+      .style("fill", function(d) {if (d.season == "19-20") {return "#e74c3c";} else {return "rgba(0,0,0,0)";}; })
   		.on("mouseover", function(d) {
           div.transition()
                .duration(200)

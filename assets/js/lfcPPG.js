@@ -83,7 +83,7 @@ d3.csv("../../../assets/js/seasonData.csv", function(error, data) {
       .attr("r", 3.5)
       .attr("cx", function(d) { return x(d.week); })
       .attr("cy", function(d) { return y(d.points / d.week); })
-      .style("fill", function(d) {if (d.season == "16-17") {return "#e74c3c";} else {return "rgba(0,0,0,0)";}; })
+      .style("fill", function(d) {if (d.season == "19-20") {return "#e74c3c";} else {return "rgba(0,0,0,0)";}; })
   		.on("mouseover", function(d) {
           div2.transition()
                .duration(200)
